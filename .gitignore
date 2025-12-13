@@ -10,8 +10,8 @@
 .config/*
 !.config/waybar
 !.config/waybar/*
-!.config/hyprland
-!.config/hyprland/**
+!.config/hypr
+!.config/hypr/**
 !.config/wal
 !.config/wal/**
 !Wallpapers
