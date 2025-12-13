@@ -1,0 +1,64 @@
+@import url("colors.css");
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+button {
+    border: none;
+    margin: 3px 6px;
+    border-radius: 4px;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+}
+button {
+    padding: 0 5px;
+    background-color: @color3;
+    color: @color16;
+}
+
+button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+button.focused, #workspaces button.active {
+    background-color: @color1;
+}
+
+button.urgent {
+    background-color: #eb4d4b;
+}
+
