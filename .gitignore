@@ -16,6 +16,8 @@
 !.config/wal/**
 !Wallpapers
 !Wallpapers/**
+!projects
+projects/*
 !projects/walcustom
 !projects/walcustom/**
 
