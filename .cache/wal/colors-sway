@@ -1,0 +1,21 @@
+set $wallpaper /home/alexin/Wallpapers/fav/a_red_sun_over_mountains.jpg
+
+set $background #101116
+set $foreground #9abdb8
+
+set $color0 #101116
+set $color1 #A03D3A
+set $color2 #DC392F
+set $color3 #E23C31
+set $color4 #E14235
+set $color5 #3E827C
+set $color6 #4D877A
+set $color7 #9abdb8
+set $color8 #6b8480
+set $color9 #A03D3A
+set $color10 #DC392F
+set $color11 #E23C31
+set $color12 #E14235
+set $color13 #3E827C
+set $color14 #4D877A
+set $color15 #9abdb8

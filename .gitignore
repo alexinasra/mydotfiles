@@ -6,6 +6,10 @@
 !.fdignore
 !.vim
 .vim/plugged
+!.cache
+.cache/*
+!.cache/wal
+!.cache/wal/**
 !.config
 .config/*
 !.config/waybar

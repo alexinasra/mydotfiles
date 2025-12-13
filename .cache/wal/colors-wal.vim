@@ -1,0 +1,23 @@
+" Special
+let wallpaper  = "/home/alexin/Wallpapers/fav/a_red_sun_over_mountains.jpg"
+let background = "#101116"
+let foreground = "#9abdb8"
+let cursor     = "#9abdb8"
+
+" Colors
+let color0  = "#101116"
+let color1  = "#A03D3A"
+let color2  = "#DC392F"
+let color3  = "#E23C31"
+let color4  = "#E14235"
+let color5  = "#3E827C"
+let color6  = "#4D877A"
+let color7  = "#9abdb8"
+let color8  = "#6b8480"
+let color9  = "#A03D3A"
+let color10 = "#DC392F"
+let color11 = "#E23C31"
+let color12 = "#E14235"
+let color13 = "#3E827C"
+let color14 = "#4D877A"
+let color15 = "#9abdb8"
