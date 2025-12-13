@@ -5,6 +5,7 @@
 !.bashrc
 !.fdignore
 !.vim
+!.vim/*
 .vim/plugged
 !.cache
 .cache/*
