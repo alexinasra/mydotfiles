@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/alexin/git_root/Waybar'
+let g:netrw_dirhist_6='/home/alexin/projects/testing/hyprland/testing_hyprlang'
 let g:netrw_dirhist_5='/home/alexin/projects/hyprland-panel/src/config'
 let g:netrw_dirhist_4='/home/alexin/projects/hyprland-panel/src'
 let g:netrw_dirhist_3='/home/alexin/projects/hyprland-panel/src/elements'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_1='/home/alexin/projects/hyprland-panel'
 let g:netrw_dirhist_0='/home/alexin/projects/hyprland-panel/src'
 let g:netrw_dirhist_9='/home/alexin/projects/hyprland-panel'
 let g:netrw_dirhist_8='/home/alexin/projects/hyprland-panel/src'
-let g:netrw_dirhist_7='/home/alexin/projects/hyprland-panel'
-let g:netrw_dirhist_6='/home/alexin/projects/hyprland-panel/src/elements'
