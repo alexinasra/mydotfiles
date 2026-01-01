@@ -3,6 +3,8 @@
 !.profile
 !.bash_profile
 !.bashrc
+!.bashrc.d
+!.bashrc.d/*
 !.fdignore
 !.vim
 !.vim/*
