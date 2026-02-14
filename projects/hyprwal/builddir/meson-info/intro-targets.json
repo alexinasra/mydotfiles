@@ -1,0 +1,108 @@
+[
+  {
+    "name": "hyprwal",
+    "id": "hyprwal@exe",
+    "type": "executable",
+    "defined_in": "/home/alexin/projects/hyprwal/meson.build",
+    "filename": [
+      "/home/alexin/projects/hyprwal/builddir/hyprwal"
+    ],
+    "build_by_default": true,
+    "target_sources": [
+      {
+        "language": "cpp",
+        "machine": "host",
+        "compiler": [
+          "c++"
+        ],
+        "parameters": [
+          "-I/home/alexin/projects/hyprwal/builddir/hyprwal.p",
+          "-I/home/alexin/projects/hyprwal/builddir",
+          "-I/home/alexin/projects/hyprwal",
+          "-I/usr/include/hyprland/protocols",
+          "-I/usr/include/hyprland",
+          "-I/usr/include/pixman-1",
+          "-I/usr/include/libdrm",
+          "-I/usr/include/libpng16",
+          "-I/usr/include/ImageMagick-7",
+          "-fdiagnostics-color=always",
+          "-D_GLIBCXX_ASSERTIONS=1",
+          "-D_FILE_OFFSET_BITS=64",
+          "-Wall",
+          "-Winvalid-pch",
+          "-Wextra",
+          "-Wpedantic",
+          "-std=c++23",
+          "-O0",
+          "-g",
+          "-pthread",
+          "-fopenmp",
+          "-DMAGICKCORE_HDRI_ENABLE=1",
+          "-DMAGICKCORE_QUANTUM_DEPTH=16",
+          "-DMAGICKCORE_CHANNEL_MASK_DEPTH=32",
+          "-DHWY_SHARED_DEFINE"
+        ],
+        "sources": [
+          "/home/alexin/projects/hyprwal/src/main.cpp",
+          "/home/alexin/projects/hyprwal/src/app.cpp",
+          "/home/alexin/projects/hyprwal/src/fs.cpp"
+        ],
+        "generated_sources": [],
+        "unity_sources": []
+      },
+      {
+        "linker": [
+          "c++"
+        ],
+        "parameters": [
+          "-Wl,--as-needed",
+          "-Wl,--no-undefined",
+          "-Wl,--start-group",
+          "-Wl,--start-group",
+          "/usr/lib/libhyprtoolkit.so",
+          "/usr/lib/libhyprlang.so",
+          "/usr/lib/libhyprutils.so",
+          "/usr/lib/libhyprcursor.so",
+          "/usr/lib/libhyprgraphics.so",
+          "/usr/lib/libpixman-1.so",
+          "/usr/lib/libdrm.so",
+          "/usr/lib/libjsoncpp.so",
+          "/usr/lib/libpng16.so",
+          "/usr/lib/libjpeg.so",
+          "/usr/lib/libjxl.so",
+          "/usr/lib/libMagick++-7.Q16HDRI.so",
+          "/usr/lib/libMagickWand-7.Q16HDRI.so",
+          "/usr/lib/libMagickCore-7.Q16HDRI.so",
+          "-Wl,--end-group",
+          "-Wl,--end-group",
+          "-pthread"
+        ]
+      }
+    ],
+    "extra_files": [],
+    "subproject": null,
+    "dependencies": [
+      "hyprland",
+      "hyprtoolkit",
+      "hyprlang",
+      "hyprutils",
+      "hyprcursor",
+      "hyprgraphics",
+      "hyprwayland-scanner",
+      "pixman-1",
+      "libdrm",
+      "jsoncpp",
+      "libpng",
+      "libjpeg",
+      "libjxl",
+      "Magick++",
+      "threads"
+    ],
+    "depends": [],
+    "win_subsystem": "console",
+    "installed": true,
+    "install_filename": [
+      "/usr/local/bin/hyprwal"
+    ]
+  }
+]

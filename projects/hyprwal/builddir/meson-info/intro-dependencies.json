@@ -1,0 +1,244 @@
+[
+  {
+    "name": "hyprland",
+    "type": "pkgconfig",
+    "version": "0.52.0",
+    "compile_args": [
+      "-I/usr/include/hyprland/protocols",
+      "-I/usr/include/hyprland"
+    ],
+    "link_args": [],
+    "include_directories": [],
+    "sources": [],
+    "extra_files": [],
+    "dependencies": [],
+    "depends": [],
+    "meson_variables": []
+  },
+  {
+    "name": "hyprtoolkit",
+    "type": "pkgconfig",
+    "version": "0.4.1",
+    "compile_args": [],
+    "link_args": [
+      "/usr/lib/libhyprtoolkit.so"
+    ],
+    "include_directories": [],
+    "sources": [],
+    "extra_files": [],
+    "dependencies": [],
+    "depends": [],
+    "meson_variables": []
+  },
+  {
+    "name": "hyprlang",
+    "type": "pkgconfig",
+    "version": "0.6.7",
+    "compile_args": [],
+    "link_args": [
+      "/usr/lib/libhyprlang.so"
+    ],
+    "include_directories": [],
+    "sources": [],
+    "extra_files": [],
+    "dependencies": [],
+    "depends": [],
+    "meson_variables": []
+  },
+  {
+    "name": "hyprutils",
+    "type": "pkgconfig",
+    "version": "0.10.4",
+    "compile_args": [],
+    "link_args": [
+      "/usr/lib/libhyprutils.so"
+    ],
+    "include_directories": [],
+    "sources": [],
+    "extra_files": [],
+    "dependencies": [],
+    "depends": [],
+    "meson_variables": []
+  },
+  {
+    "name": "hyprcursor",
+    "type": "pkgconfig",
+    "version": "0.1.13",
+    "compile_args": [],
+    "link_args": [
+      "/usr/lib/libhyprcursor.so"
+    ],
+    "include_directories": [],
+    "sources": [],
+    "extra_files": [],
+    "dependencies": [],
+    "depends": [],
+    "meson_variables": []
+  },
+  {
+    "name": "hyprgraphics",
+    "type": "pkgconfig",
+    "version": "0.4.0",
+    "compile_args": [],
+    "link_args": [
+      "/usr/lib/libhyprgraphics.so"
+    ],
+    "include_directories": [],
+    "sources": [],
+    "extra_files": [],
+    "dependencies": [],
+    "depends": [],
+    "meson_variables": []
+  },
+  {
+    "name": "hyprwayland-scanner",
+    "type": "pkgconfig",
+    "version": "0.4.5",
+    "compile_args": [],
+    "link_args": [],
+    "include_directories": [],
+    "sources": [],
+    "extra_files": [],
+    "dependencies": [],
+    "depends": [],
+    "meson_variables": []
+  },
+  {
+    "name": "pixman-1",
+    "type": "pkgconfig",
+    "version": "0.46.4",
+    "compile_args": [
+      "-I/usr/include/pixman-1"
+    ],
+    "link_args": [
+      "/usr/lib/libpixman-1.so"
+    ],
+    "include_directories": [],
+    "sources": [],
+    "extra_files": [],
+    "dependencies": [],
+    "depends": [],
+    "meson_variables": []
+  },
+  {
+    "name": "libdrm",
+    "type": "pkgconfig",
+    "version": "2.4.126",
+    "compile_args": [
+      "-I/usr/include/libdrm"
+    ],
+    "link_args": [
+      "/usr/lib/libdrm.so"
+    ],
+    "include_directories": [],
+    "sources": [],
+    "extra_files": [],
+    "dependencies": [],
+    "depends": [],
+    "meson_variables": []
+  },
+  {
+    "name": "jsoncpp",
+    "type": "pkgconfig",
+    "version": "1.9.6",
+    "compile_args": [],
+    "link_args": [
+      "/usr/lib/libjsoncpp.so"
+    ],
+    "include_directories": [],
+    "sources": [],
+    "extra_files": [],
+    "dependencies": [],
+    "depends": [],
+    "meson_variables": []
+  },
+  {
+    "name": "threads",
+    "type": "system",
+    "version": "unknown",
+    "compile_args": [
+      "-pthread"
+    ],
+    "link_args": [
+      "-pthread"
+    ],
+    "include_directories": [],
+    "sources": [],
+    "extra_files": [],
+    "dependencies": [],
+    "depends": [],
+    "meson_variables": []
+  },
+  {
+    "name": "libpng",
+    "type": "pkgconfig",
+    "version": "1.6.50",
+    "compile_args": [
+      "-I/usr/include/libpng16"
+    ],
+    "link_args": [
+      "/usr/lib/libpng16.so"
+    ],
+    "include_directories": [],
+    "sources": [],
+    "extra_files": [],
+    "dependencies": [],
+    "depends": [],
+    "meson_variables": []
+  },
+  {
+    "name": "libjpeg",
+    "type": "pkgconfig",
+    "version": "3.0.1",
+    "compile_args": [],
+    "link_args": [
+      "/usr/lib/libjpeg.so"
+    ],
+    "include_directories": [],
+    "sources": [],
+    "extra_files": [],
+    "dependencies": [],
+    "depends": [],
+    "meson_variables": []
+  },
+  {
+    "name": "libjxl",
+    "type": "pkgconfig",
+    "version": "0.11.1",
+    "compile_args": [
+      "-DHWY_SHARED_DEFINE"
+    ],
+    "link_args": [
+      "/usr/lib/libjxl.so"
+    ],
+    "include_directories": [],
+    "sources": [],
+    "extra_files": [],
+    "dependencies": [],
+    "depends": [],
+    "meson_variables": []
+  },
+  {
+    "name": "Magick++",
+    "type": "pkgconfig",
+    "version": "7.1.2",
+    "compile_args": [
+      "-I/usr/include/ImageMagick-7",
+      "-fopenmp",
+      "-DMAGICKCORE_HDRI_ENABLE=1",
+      "-DMAGICKCORE_QUANTUM_DEPTH=16",
+      "-DMAGICKCORE_CHANNEL_MASK_DEPTH=32"
+    ],
+    "link_args": [
+      "/usr/lib/libMagick++-7.Q16HDRI.so",
+      "/usr/lib/libMagickWand-7.Q16HDRI.so",
+      "/usr/lib/libMagickCore-7.Q16HDRI.so"
+    ],
+    "include_directories": [],
+    "sources": [],
+    "extra_files": [],
+    "dependencies": [],
+    "depends": [],
+    "meson_variables": []
+  }
+]
