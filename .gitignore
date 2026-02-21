@@ -10,10 +10,8 @@
 !.vim/*
 .vim/plugged
 .vim/.netrwhist
-!.cache
+.cache
 .cache/*
-!.cache/wal
-!.cache/wal/**
 !.config
 .config/*
 !.config/waybar
