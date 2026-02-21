@@ -21,4 +21,13 @@ if [ -d "$HOME/.bashrc.d" ] ; then
         source "$file"
     done
 fi
+
+
+if [ -d "$HOME/.bin" ] ; then
+  pathprepend $HOME/.bin
+fi
+if [ -d "$HOME/.cargo/bin" ] ; then
+    pathprepend $HOME/.cargo/bin
+fi
+
 # End ~/.bashrc

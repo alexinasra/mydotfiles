@@ -58,41 +58,41 @@ $on-dark: WalColors.$foreground;
 // Main colors
 //
 
-$surface-z0: WalColors.$foreground;
-$surface-z1: #fff;
-$surface-z8: #fff;
-$surface-switch-thumb: #fff;
+$surface-z0: WalColors.$background;
+$surface-z1: WalColors.$color0;
+$surface-z8: WalColors.$color8;
+$surface-switch-thumb: WalColors.$color8;
 $on-surface: on($surface-z0);
 
-$primary-on-light: WalColors.$background;
-$primary-on-dark: WalColors.$foreground;
+$primary-on-light: WalColors.$color4;
+$primary-on-dark: WalColors.$color4;
 $primary: $primary-on-light;
 $on-primary: on($primary);
 
-$error-on-light: #d93025;
-$error-on-dark: #f28b82;
+$error-on-light: WalColors.$color1;
+$error-on-dark: WalColors.$color9;
 $error: $error-on-light;
 $on-error: on($error);
 
-$warning-on-light: #f9ab00;
-$warning-on-dark: #fdd663;
+$warning-on-light: WalColors.$color3;
+$warning-on-dark: WalColors.$color11;
 $warning: $warning-on-light;
 $on-warning: on($warning);
 
-$success-on-light: #1e8e3e;
-$success-on-dark: #81c995;
+$success-on-light: WalColors.$color2;
+$success-on-dark: WalColors.$color10;
 $success: $success-on-light;
 $on-success: on($success);
 
-$visited-on-light: #9334e6;
-$visited-on-dark: #c58af9;
+$visited-on-light: WalColors.$color5;
+$visited-on-dark: WalColors.$color13;
 $visited: $visited-on-light;
 $on-visited: on($visited);
 
-$system: WalColors.$color4;
+$system: WalColors.$color6;
 $on-system: on($system);
 
-$tooltip: rgba(#616161, .9);
+$tooltip: rgba(WalColors.$color0, .9);
 $on-tooltip: on($tooltip);
 
 $scrim: rgba(black, .6);
@@ -101,24 +101,24 @@ $on-scrim: on($scrim);
 $scrim-alt: rgba(black, .3);
 $on-scrim-alt: on($scrim-alt);
 
-$panel: WalColors.$color6;
+$panel: WalColors.$color0;
 $on-panel: on($panel);
 
 // for Unity panel which doesn't allow translucent colors
 $panel-solid: $panel;
 $on-panel-solid: on($panel-solid);
 
-$titlebar: WalColors.$color8;
-$titlebar-backdrop: #303030;
+$titlebar: WalColors.$color0;
+$titlebar-backdrop: WalColors.$color8;
 $on-titlebar: on($titlebar);
 
 $titlebar-indicator: currentcolor;
 
 @if theme.$dark-theme {
   $surface-z0: WalColors.$background;
-  $surface-z1: color.mix(white, $surface-z0, 5%);
-  $surface-z8: color.mix(white, $surface-z0, 12%);
-  $surface-switch-thumb: color.mix(white, $surface-z0, 60%);
+  $surface-z1: WalColors.$color0;
+  $surface-z8: WalColors.$color8;
+  $surface-switch-thumb: WalColors.$color8;
   $on-surface: on($surface-z0);
 
   $primary: $primary-on-dark;
@@ -136,7 +136,7 @@ $titlebar-indicator: currentcolor;
   $visited: $visited-on-dark;
   $on-visited: on($visited);
 
-  $titlebar: color.mix(white, $surface-z0, 9%);
+  $titlebar: $surface-z0;
   $titlebar-backdrop: $surface-z1;
   $on-titlebar: on($titlebar);
 }
@@ -145,11 +145,11 @@ $titlebar-indicator: currentcolor;
   $panel: $scrim;
   $on-panel: on($panel);
 
-  $panel-solid: #e0e0e0;
+  $panel-solid: $surface-z1;
   $on-panel-solid: on($panel-solid);
 
-  $titlebar: #f0f0f0;
-  $titlebar-backdrop: #ebebeb;
+  $titlebar: $surface-z1;
+  $titlebar-backdrop: $surface-z8;
   $on-titlebar: on($titlebar);
 
   $titlebar-indicator: $primary;

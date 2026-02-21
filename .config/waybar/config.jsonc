@@ -22,8 +22,12 @@
         "keyboard-state",
         "hyprland/language",
         "battery",
-        "clock"
+        "clock",
+        "tray"
     ], 
+    "window": {
+        "justify": "center"
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,

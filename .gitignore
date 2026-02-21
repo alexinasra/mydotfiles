@@ -11,7 +11,7 @@
 .vim/plugged
 .vim/.netrwhist
 .cache
-.cache/*
+.cache/**
 !.config
 .config/*
 !.config/waybar
@@ -20,10 +20,10 @@
 !.config/hypr/**
 !.config/wal
 !.config/wal/**
-!Wallpapers
-!Wallpapers/**
-!projects
-projects/*
+!Pictures
+!Pictures/**
+projects
+projects/**
 !projects/walcustom
 !projects/walcustom/**
 

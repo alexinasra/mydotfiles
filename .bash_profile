@@ -17,6 +17,12 @@ if [ -d "$HOME/bin" ] ; then
   pathprepend $HOME/bin
 fi
 
+if [ -d "$HOME/.bin" ] ; then
+  pathprepend $HOME/.bin
+fi
+if [ -d "$HOME/.cargo/bin" ] ; then
+    pathprepend $HOME/.cargo/bin
+fi
 # Having . in the PATH is dangerous
 #if [ $EUID -gt 99 ]; then
 #  pathappend .
