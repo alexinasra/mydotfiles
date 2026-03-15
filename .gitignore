@@ -12,6 +12,8 @@
 .vim/.netrwhist
 .cache
 .cache/**
+!.fonts
+!.fonts/**
 !.config
 .config/*
 !.config/waybar
