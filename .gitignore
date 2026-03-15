@@ -12,6 +12,8 @@
 .vim/.netrwhist
 .cache
 .cache/**
+!.themes
+!.themes/**
 !.fonts
 !.fonts/**
 !.config
