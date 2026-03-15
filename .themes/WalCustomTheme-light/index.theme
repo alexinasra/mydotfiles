@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=WalCustomTheme-light
+Comment=A Material Design theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=WalCustomTheme-light
+MetacityTheme=WalCustomTheme-light
+IconTheme=Adwaita
+CursorTheme=Adwaita
+CursorSize=24
