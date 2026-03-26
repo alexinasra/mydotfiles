@@ -19,4 +19,4 @@ call s:ensure('junegunn/fzf')
 call s:ensure('junegunn/fzf.vim')
 call s:ensure('itchyny/lightline.vim')
 call s:ensure('yegappan/lsp')
-
+call s:ensure('rhysd/vim-clang-format')
