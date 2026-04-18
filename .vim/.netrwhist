@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/alexin/Pictures'
 let g:netrw_dirhist_7='/home/alexin/projects/hyprtoolkit/src/core'
 let g:netrw_dirhist_6='/home/alexin/projects/hyprtoolkit/src'
 let g:netrw_dirhist_5='/home/alexin/projects/hyprtoolkit'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_2='/home/alexin/projects/hyprtoolkit/include'
 let g:netrw_dirhist_1='/home/alexin/projects/hyprtoolkit/include/hyprtoolkit/element'
 let g:netrw_dirhist_0='/home/alexin/projects/hyprtoolkit/include/hyprtoolkit'
 let g:netrw_dirhist_9='/home/alexin/projects/hyprtoolkit/include'
-let g:netrw_dirhist_8='/home/alexin/projects/hyprtoolkit'
