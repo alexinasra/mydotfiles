@@ -5,7 +5,7 @@ let lspServers = [
     \ #{
     \   name: 'rust-analyzer',
     \   filetype: ['rust'],
-    \   path: 'rust-analyzer',
+    \   path: '/usr/bin/rust-analyzer',
     \   args: []
     \ },
     \ #{
