@@ -12,9 +12,7 @@ source ~/.cache/wal/colors-tty.sh
 
 wal-tile() {
     wal -c
-    wal -n -i "$@" && wait 1
-    hyprctl hyprpaper preload "$(< "$HOME/.cache/wal/wal")"
-    hyprctl hyprpaper wallpaper ,"$(< "$HOME/.cache/wal/wal")"
+    wal -n -i "$@"
     cp -v $HOME/{.cache/wal/,.config/hypr/}hyprpaper.conf
     cp -v $HOME/{.cache/wal/,.config/hypr/}hyprtoolkit.conf
     cp -v $HOME/{.cache/wal/,.config/waybar/}colors-waybar.css
@@ -28,4 +26,6 @@ wal-tile() {
         meson setup -Ddatadir=".themes" --prefix=$HOME build
         ninja -C build install
     popd
-}
+    WALL=$(< "$HOME/.cache/wal/wal")
+   hyprctl hyprpaper wallpaper  ",$WALL,cover" #unknow issue under hyprland.lua
+ }
