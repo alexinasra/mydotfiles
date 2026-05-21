@@ -6,9 +6,9 @@
 hl.config({
     general = {
         gaps_in  = 5,
-        gaps_out = 20,
+        gaps_out = 2,
 
-        border_size = 2,
+        border_size = 1,
 
         col = {
             active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
@@ -21,11 +21,11 @@ hl.config({
         -- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
         allow_tearing = false,
 
-        layout = "dwindle",
+        layout = "scrolling",
     },
 
     decoration = {
-        rounding       = 10,
+        rounding       = 4,
         rounding_power = 2,
 
         -- Change transparency of focused and unfocused windows
@@ -116,6 +116,8 @@ hl.config({
 hl.config({
     scrolling = {
         fullscreen_on_one_column = true,
+        column_width = 0.9,
+        direction = "down"
     },
 })
 
