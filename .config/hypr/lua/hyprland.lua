@@ -10,10 +10,10 @@
 -- require("myColors")
 
 
+require("enviroment_variables");
 require("monitors");
 require("programs");
 require("autostart");
-require("enviroment_variables");
 require("permissions");
 require("looknfeel");
 require("misc");
