@@ -21,6 +21,25 @@ let lspServers = [
     \   args: ['--background-index', '--clang-tidy']
     \ },
     \ #{
+    \   name: 'lua-language-server',
+    \   filetype: ['lua'],
+    \   path: '/usr/bin/lua-language-server',
+    \   args: [],
+    \   workspaceConfig: #{
+    \     Lua: #{
+    \       hint: #{
+    \         enable: v:true,
+    \       },
+    \       diagnostics: #{
+    \         globals: ['vim'],
+    \       },
+    \       runtime: #{
+    \         version: 'Lua 5.4',
+    \       },
+    \     }
+    \   }
+    \ },
+    \ #{
     \   name: 'cssls',
     \   filetype: ['css'],
     \   path: 'css-languageserver',
