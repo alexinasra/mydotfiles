@@ -8,8 +8,9 @@
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function () 
-  hl.exec_cmd("wal -R");
+  hl.exec_cmd("hyprctl setcursor Empty-Butterfly-Purple 24");
   hl.exec_cmd("waybar & hyprpaper & hypridle")
+  hl.exec_cmd("wal -R");
 end)
 
 
