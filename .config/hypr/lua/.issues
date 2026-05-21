@@ -1,1 +1,2 @@
-* cursor is not changing at startup.
+!* cursor is not changing at startup.
+* loading takes long time (maybe it should)
