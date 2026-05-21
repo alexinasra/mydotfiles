@@ -98,6 +98,13 @@ hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "
 --     rounding    = 0,
 -- })
 
+
+hl.config({
+  cursor = {
+    enable_hyprcursor = true,
+    sync_gsettings_theme = true
+  }
+})
 -- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
 hl.config({
     dwindle = {
