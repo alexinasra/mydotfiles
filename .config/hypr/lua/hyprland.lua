@@ -20,4 +20,5 @@ require("misc");
 require("input");
 require("keybindings");
 require("workspaces");
+require("windows");
 
