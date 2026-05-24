@@ -1,5 +1,5 @@
 -- Cursor settings
-CURSOR_THEME  = "Empty-Butterfly-Purpl"
+CURSOR_THEME  = "Empty-Butterfly-Purple"
 CURSOR_SIZE   = "24"
 
 
