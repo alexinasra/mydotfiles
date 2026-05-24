@@ -7,8 +7,8 @@
 -- Autostart necessary processes (like notifications daemons, status bars, etc.)
 -- Or execute your favorite apps at launch like this:
 --
-hl.on("hyprland.start", function () 
-  hl.exec_cmd("hyprctl setcursor Empty-Butterfly-Purple 24");
+hl.on("hyprland.start", function ()
+  hl.exec_cmd("hyprctl setcursor " .. CURSOR_THEME .. " " .. CURSOR_SIZE);
   hl.exec_cmd("waybar & hyprpaper & hypridle")
   hl.exec_cmd("wal -R");
 end)

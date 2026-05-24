@@ -9,10 +9,9 @@
 -- Create your files separately and then require them like this:
 -- require("myColors")
 
-
+require("globals");
 require("enviroment_variables");
 require("monitors");
-require("programs");
 require("autostart");
 require("permissions");
 require("looknfeel");
