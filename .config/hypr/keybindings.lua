@@ -29,6 +29,10 @@ hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 
+-- super + tilda switch to previous workspace
+hl.bind(mainMod .. " + grave",             hl.dsp.focus({ workspace = "previous"}))
+hl.bind(mainMod .. " + SHIFT + grave",     hl.dsp.window.move({ workspace = "previous" }))
+
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do
