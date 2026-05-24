@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/alexin/.config/hypr'
+let g:netrw_dirhist_5='/home/alexin/.config'
+let g:netrw_dirhist_4='/home/alexin/.config/hypr'
 let g:netrw_dirhist_3='/home/alexin/.config/hypr/lua'
 let g:netrw_dirhist_2='/home/alexin/.config/soundscene/assets/scripts'
 let g:netrw_dirhist_1='/home/alexin/.config/soundscene/assets'
@@ -7,6 +10,3 @@ let g:netrw_dirhist_0='/home/alexin/.config/soundscene'
 let g:netrw_dirhist_9='/home/alexin/projects/pipewire-sounde-AI2/src/shaders'
 let g:netrw_dirhist_8='/home/alexin/projects/pipewire-sounde-AI2/src'
 let g:netrw_dirhist_7='/home/alexin/projects/pipewire-sounde-AI2'
-let g:netrw_dirhist_6='/home/alexin/projects/pipewire-sounde-AI2/views'
-let g:netrw_dirhist_5='/home/alexin/projects/pipewire-sounde-AI2'
-let g:netrw_dirhist_4='/home/alexin/projects/pipewire-sounde-AI2/render_api'
