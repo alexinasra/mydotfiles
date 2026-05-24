@@ -33,6 +33,15 @@ hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 hl.bind(mainMod .. " + grave",             hl.dsp.focus({ workspace = "previous"}))
 hl.bind(mainMod .. " + SHIFT + grave",     hl.dsp.window.move({ workspace = "previous" }))
 
+
+-- go reverse
+hl.bind(mainMod .. " + minus",             hl.dsp.focus({ workspace = "-1"}))
+hl.bind(mainMod .. " + SHIFT + minus",     hl.dsp.window.move({ workspace = "-1" }))
+
+-- go forward
+hl.bind(mainMod .. " + equal",             hl.dsp.focus({ workspace = "+1"}))
+hl.bind(mainMod .. " + SHIFT + equal",     hl.dsp.window.move({ workspace = "+1" }))
+
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do
