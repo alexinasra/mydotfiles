@@ -15,6 +15,7 @@ wal-tile() {
     wal -n -i "$@"
     cp -v $HOME/{.cache/wal/,.config/hypr/}hyprpaper.conf
     cp -v $HOME/{.cache/wal/,.config/hypr/}hyprtoolkit.conf
+    cp -v $HOME/{.cache/wal/,.config/hypr/}colors.lua
     cp -v $HOME/{.cache/wal/,.config/waybar/}colors-waybar.css
     cp -v $HOME/{.cache/wal/,.vim/}colors-wal.vim
     pkill hyprlauncher

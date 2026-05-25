@@ -1,3 +1,4 @@
+require("colors")
 -- Cursor settings
 CURSOR_THEME  = "Empty-Butterfly-Purple"
 CURSOR_SIZE   = "24"
