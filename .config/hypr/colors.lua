@@ -1,7 +1,7 @@
 -- Colors
 -- Generated with wal-tile (see ~/.config/wal/template and ~/.bashrc.d/wal.sh)
 COLORS = {
-  COL_ACTIVE_BORDER  = { 0xFF048CB1, 0xCC10A9CE },
-  COL_INACTIVE_BORDER = 0xFFa7d9e9,
-  DECORATION_SHADOW   = 0xEE036E8F
+  COL_ACTIVE_BORDER  = { 0xFFB07331, 0xCCBB823B },
+  COL_INACTIVE_BORDER = 0xFFFDE127,
+  DECORATION_SHADOW   = 0xEEe7ca9a
 }

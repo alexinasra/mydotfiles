@@ -28,5 +28,5 @@ wal-tile() {
         ninja -C build install
     popd
     WALL=$(< "$HOME/.cache/wal/wal")
-   hyprctl hyprpaper wallpaper  ",$WALL,cover" #unknow issue under hyprland.lua
+    hyprctl hyprpaper wallpaper ,$WALL,cover
  }
