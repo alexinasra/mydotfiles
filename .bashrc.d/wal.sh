@@ -18,6 +18,8 @@ wal-tile() {
     cp -v $HOME/{.cache/wal/,.config/hypr/}colors.lua
     cp -v $HOME/{.cache/wal/,.config/waybar/}colors-waybar.css
     cp -v $HOME/{.cache/wal/,.vim/}colors-wal.vim
+    pkill hyprpaper
+    hyprpaper & disown 
     pkill hyprlauncher
     killall -SIGUSR2 waybar
     pywalfox update
@@ -28,5 +30,4 @@ wal-tile() {
         ninja -C build install
     popd
     WALL=$(< "$HOME/.cache/wal/wal")
-    hyprctl hyprpaper wallpaper ,$WALL,cover
  }
