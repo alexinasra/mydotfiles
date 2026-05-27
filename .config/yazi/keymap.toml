@@ -1,0 +1,4 @@
+[[mgr.prepend_keymap]]
+on   = [ "s", "t" ]
+run  = '''shell "bash -i -c 'wal-tile \"$0\"' %h"'''
+desc = "Change Theme"

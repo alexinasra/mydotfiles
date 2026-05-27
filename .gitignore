@@ -26,6 +26,8 @@
 !.config/hypr/**
 !.config/wal
 !.config/wal/**
+!.config/yazi
+!.config/yazi/**
 !Pictures
 !Pictures/**
 projects
