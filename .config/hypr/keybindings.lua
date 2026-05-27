@@ -30,6 +30,13 @@ hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 
+
+-- Resize focus with mainMod + Ctrl + arrow keys
+hl.bind(mainMod .. " + CTRL + left",  hl.dsp.window.resize({ x = -10, y =  0, relative = true }),{ repeating=true })
+hl.bind(mainMod .. " + CTRL + right", hl.dsp.window.resize({ x =  10, y =  0, relative = true }),{ repeating=true })
+hl.bind(mainMod .. " + CTRL + up",    hl.dsp.window.resize({ x =  0, y = -10, relative = true }),{ repeating=true })
+hl.bind(mainMod .. " + CTRL + down",  hl.dsp.window.resize({ x =  0, y =  10, relative = true }),{ repeating=true })
+
 -- super + tilda switch to previous workspace
 hl.bind(mainMod .. " + grave",             hl.dsp.focus({ workspace = "previous"}))
 hl.bind(mainMod .. " + SHIFT + grave",     hl.dsp.window.move({ workspace = "previous" }))
