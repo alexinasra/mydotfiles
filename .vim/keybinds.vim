@@ -11,3 +11,4 @@ autocmd FileType c,cpp,objc,java,javascript,typescript,proto vnoremap <buffer><L
 
 let g:clang_format#auto_format = 1
 
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"

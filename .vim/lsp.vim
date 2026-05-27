@@ -1,11 +1,27 @@
 " Enable diagnostics highlighting
-let lspOpts = #{autoHighlightDiags: v:true}
+let lspOpts = #{
+    \ autoHighlightDiags: v:true,
+    \ autoComplete: v:true,
+    \ completionTextDelay: 200,  
+    \ maxCompletionItems: 20
+\ }
 autocmd User LspSetup call LspOptionsSet(lspOpts)
 let lspServers = [
     \ #{
     \   name: 'rust-analyzer',
     \   filetype: ['rust'],
-    \   path: '/usr/bin/rust-analyzer',
+    \   path: 'rust-analyzer',
+    \   whitelist: ['rust'],   
+    \   initializationOptions: #{
+    \     cargo: #{
+    \       sysroot: '/opt/rustc',
+    \       targetDir: 'target/rust-analyzer'
+    \     },
+    \     procMacro: #{
+    \       enable: v:false
+    \     },
+    \     primeCaches: #{ enable: v:true }
+    \   },
     \   args: []
     \ },
     \ #{
