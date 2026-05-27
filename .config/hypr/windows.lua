@@ -68,3 +68,7 @@ hl.window_rule({
   stay_focused = true 
 })
 
+hl.window_rule({
+  match = { title = "Qalculate!" },
+  float = true,
+})

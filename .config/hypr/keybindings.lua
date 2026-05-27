@@ -21,6 +21,8 @@ hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(BROWSER))
 -- scratcheditor
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(EDITOR))
 
+-- Calculator
+hl.bind("XF86Calculator", hl.dsp.exec_cmd(CALCULATOR))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
