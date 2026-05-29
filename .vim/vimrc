@@ -5,3 +5,7 @@ source ~/.vim/colors-wal.vim
 source ~/.vim/fzf.vim
 source ~/.vim/lightline.vim
 source ~/.vim/lsp.vim
+let g:netrw_returntodir=1
+
+" Prevents Netrw from assigning a swap file to a locked directory buffer
+autocmd FileType netrw setlocal noswapfile

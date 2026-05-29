@@ -9,7 +9,7 @@ autocmd User LspSetup call LspOptionsSet(lspOpts)
 let lspServers = [
     \ #{
     \   name: 'rust-analyzer',
-    \   filetype: ['rust'],
+    \   filetype: ['rs'],
     \   path: 'rust-analyzer',
     \   whitelist: ['rust'],   
     \   initializationOptions: #{
