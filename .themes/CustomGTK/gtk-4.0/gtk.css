@@ -1,0 +1,233 @@
+@define-color error_color #78E10F;
+@define-color destructive_color #78E10F;
+@define-color warning_color #bfeb83;
+@define-color success_color #64AA4C;
+@define-color info_color #6AD30B;
+@define-color theme_bg_color rgb(18, 66, 10);
+@define-color theme_fg_color #85a45b;
+@define-color theme_base_color rgb(19, 72, 8);
+@define-color theme_selected_bg_color #073107;
+@define-color theme_selected_fg_color #ffffff;
+* {
+  color: #85a45b;
+  caret-color: #6AD30B;
+  -gtk-icon-theme: "Adwaita";
+  outline-color: rgba(106, 211, 11, 0.35);
+  outline-style: solid;
+  outline-width: 0;
+  text-shadow: none;
+  -gtk-secondary-caret-color: #64AA4C;
+}
+
+window,
+dialog,
+popover,
+.background {
+  background: rgb(18, 66, 10);
+  color: #85a45b;
+}
+
+popover,
+tooltip {
+  border: 1px solid rgb(52, 107, 26);
+  border-radius: 8px;
+  background: rgb(43, 113, 9);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+tooltip {
+  padding: 8px 12px;
+  background: #073107;
+  color: #ffffff;
+}
+
+headerbar,
+windowhandle,
+.titlebar {
+  min-height: 48px;
+  padding: 0 12px;
+  background: linear-gradient(to bottom, #073107, rgb(27, 76, 22));
+  border-bottom: 1px solid rgb(110, 161, 70);
+  color: #ffffff;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
+}
+
+headerbar *,
+windowhandle *,
+.titlebar * {
+  color: inherit;
+}
+
+button,
+menubutton > button {
+  min-height: 30px;
+  min-width: 36px;
+  padding: 8px 14px;
+  border: 1px solid rgb(52, 107, 26);
+  border-radius: 8px;
+  background: rgb(43, 113, 9);
+  color: #85a45b;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
+  transition: background 120ms ease-out, border-color 120ms ease-out, box-shadow 120ms ease-out;
+}
+
+button:hover {
+  border-color: rgb(110, 161, 70);
+  background: rgb(55, 131, 10);
+}
+
+button:active,
+button:checked {
+  border-color: #6AD30B;
+  background: rgb(57, 127, 25);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.18);
+}
+
+button.suggested-action,
+button.default {
+  border-color: #073107;
+  background: #073107;
+  color: #ffffff;
+}
+
+button.suggested-action:hover,
+button.default:hover {
+  background: rgb(23, 74, 8);
+}
+
+button.destructive-action {
+  border-color: #78E10F;
+  background: #78E10F;
+  color: #ffffff;
+}
+
+button:disabled,
+entry:disabled,
+dropdown:disabled {
+  color: rgb(70, 110, 46);
+  background: rgb(23, 77, 9);
+}
+
+entry,
+spinbutton,
+dropdown,
+textview,
+listview,
+columnview {
+  min-height: 30px;
+  padding: 8px 12px;
+  border: 1px solid rgb(52, 107, 26);
+  border-radius: 8px;
+  background: rgb(19, 72, 8);
+  color: #85a45b;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+entry:focus,
+spinbutton:focus,
+dropdown:focus {
+  border-color: #6AD30B;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), 0 0 0 2px rgba(106, 211, 11, 0.24);
+}
+
+selection,
+*:selected {
+  background: #073107;
+  color: #ffffff;
+}
+
+checkbutton check,
+radiobutton radio {
+  min-width: 16px;
+  min-height: 16px;
+  border: 1px solid rgb(52, 107, 26);
+  background: rgb(19, 72, 8);
+}
+
+checkbutton check {
+  border-radius: 4px;
+}
+
+radiobutton radio {
+  border-radius: 999px;
+}
+
+checkbutton check:checked,
+radiobutton radio:checked {
+  background: #073107;
+  border-color: #073107;
+  color: #ffffff;
+}
+
+switch {
+  min-width: 52px;
+  min-height: 30px;
+  border-radius: 999px;
+  background: rgb(52, 107, 26);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+switch:checked {
+  background: #073107;
+}
+
+scale trough,
+progressbar trough {
+  border-radius: 999px;
+  background: rgb(52, 107, 26);
+}
+
+scale highlight,
+progressbar progress {
+  border-radius: 999px;
+  background: #073107;
+}
+
+scrollbar slider {
+  min-width: 10px;
+  min-height: 10px;
+  border-radius: 999px;
+  background: rgba(133, 164, 91, 0.42);
+}
+
+scrollbar slider:hover {
+  background: #6AD30B;
+}
+
+notebook > header tab {
+  padding: 10px 16px;
+  border-bottom: 2px solid transparent;
+  color: rgb(89, 127, 60);
+}
+
+notebook > header tab:checked {
+  border-color: #073107;
+  color: #85a45b;
+}
+
+menubar,
+toolbar,
+sidebar,
+stacksidebar,
+navigation-sidebar {
+  background: rgb(29, 91, 8);
+  border-color: rgb(52, 107, 26);
+}
+
+row,
+listview > row {
+  min-height: 36px;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+row:hover,
+listview > row:hover {
+  background: rgba(106, 211, 11, 0.12);
+}
+
+row:selected,
+listview > row:selected {
+  background: #073107;
+  color: #ffffff;
+}

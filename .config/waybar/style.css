@@ -28,7 +28,7 @@ window#waybar.hidden {
 }
 #window {
     margin: 0 30px;
-    font-size: 16;
+    font-size: 16px;
 }
 /*
 window#waybar.empty {
