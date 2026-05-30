@@ -1,0 +1,6 @@
+build/
+mybuild/
+analysis-build/
+node_modules/
+package-lock.json
+*.css.map

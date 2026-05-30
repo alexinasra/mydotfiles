@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=@theme_name@
+Comment=Custom Sass GTK theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=@theme_name@
+IconTheme=Adwaita
+CursorTheme=Adwaita
+CursorSize=24

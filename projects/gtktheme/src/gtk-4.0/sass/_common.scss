@@ -1,0 +1,236 @@
+@use "../../theme" as theme;
+
+@define-color error_color #{theme.$error};
+@define-color destructive_color #{theme.$destructive};
+@define-color warning_color #{theme.$warning};
+@define-color success_color #{theme.$success};
+@define-color info_color #{theme.$info};
+@define-color theme_bg_color #{theme.$background};
+@define-color theme_fg_color #{theme.$foreground};
+@define-color theme_base_color #{theme.$base};
+@define-color theme_selected_bg_color #{theme.$selection};
+@define-color theme_selected_fg_color #{"" + theme.$selected-fg};
+
+* {
+  color: theme.$foreground;
+  caret-color: theme.$accent;
+  -gtk-icon-theme: "Adwaita";
+  outline-color: theme.alpha(theme.$accent, .35);
+  outline-style: solid;
+  outline-width: 0;
+  text-shadow: none;
+  -gtk-secondary-caret-color: theme.$accent-alt;
+}
+
+window,
+dialog,
+popover,
+.background {
+  background: theme.$background;
+  color: theme.$foreground;
+}
+
+popover,
+tooltip {
+  border: 1px solid theme.$border;
+  border-radius: 8px;
+  background: theme.$surface-raised;
+  box-shadow: 0 12px 28px theme.$shadow;
+}
+
+tooltip {
+  padding: 8px 12px;
+  background: theme.$primary;
+  color: theme.$selected-fg;
+}
+
+headerbar,
+windowhandle,
+.titlebar {
+  min-height: 48px;
+  padding: 0 12px;
+  background: linear-gradient(to bottom, theme.$primary, theme.active(theme.$primary));
+  border-bottom: 1px solid theme.$strong-border;
+  color: theme.$selected-fg;
+  box-shadow: inset 0 1px theme.$inset-shadow;
+}
+
+headerbar *,
+windowhandle *,
+.titlebar * {
+  color: inherit;
+}
+
+button,
+menubutton > button {
+  min-height: 30px;
+  min-width: 36px;
+  padding: 8px 14px;
+  border: 1px solid theme.$border;
+  border-radius: theme.$corner-radius;
+  background: theme.$surface-raised;
+  color: theme.$foreground;
+  box-shadow: inset 0 1px theme.$inset-shadow;
+  transition: background 120ms ease-out, border-color 120ms ease-out, box-shadow 120ms ease-out;
+}
+
+button:hover {
+  border-color: theme.$strong-border;
+  background: theme.$surface-hover;
+}
+
+button:active,
+button:checked {
+  border-color: theme.$accent;
+  background: theme.$surface-active;
+  box-shadow: inset 0 1px 2px theme.alpha(black, .18);
+}
+
+button.suggested-action,
+button.default {
+  border-color: theme.$primary;
+  background: theme.$primary;
+  color: theme.$selected-fg;
+}
+
+button.suggested-action:hover,
+button.default:hover {
+  background: theme.hover(theme.$primary);
+}
+
+button.destructive-action {
+  border-color: theme.$destructive;
+  background: theme.$destructive;
+  color: theme.$selected-fg;
+}
+
+button:disabled,
+entry:disabled,
+dropdown:disabled {
+  color: theme.disabled(theme.$foreground);
+  background: theme.disabled(theme.$surface);
+}
+
+entry,
+spinbutton,
+dropdown,
+textview,
+listview,
+columnview {
+  min-height: 30px;
+  padding: 8px 12px;
+  border: 1px solid theme.$border;
+  border-radius: theme.$corner-radius;
+  background: theme.$base;
+  color: theme.$foreground;
+  box-shadow: inset 0 1px 2px theme.alpha(black, .12);
+}
+
+entry:focus,
+spinbutton:focus,
+dropdown:focus {
+  border-color: theme.$accent;
+  box-shadow: inset 0 1px 2px theme.alpha(black, .12), 0 0 0 2px theme.alpha(theme.$accent, .24);
+}
+
+selection,
+*:selected {
+  background: theme.$selection;
+  color: theme.$selected-fg;
+}
+
+checkbutton check,
+radiobutton radio {
+  min-width: 16px;
+  min-height: 16px;
+  border: 1px solid theme.$border;
+  background: theme.$base;
+}
+
+checkbutton check {
+  border-radius: 4px;
+}
+
+radiobutton radio {
+  border-radius: 999px;
+}
+
+checkbutton check:checked,
+radiobutton radio:checked {
+  background: theme.$primary;
+  border-color: theme.$primary;
+  color: theme.$selected-fg;
+}
+
+switch {
+  min-width: 52px;
+  min-height: 30px;
+  border-radius: 999px;
+  background: theme.$border;
+  box-shadow: inset 0 1px 2px theme.alpha(black, .2);
+}
+
+switch:checked {
+  background: theme.$primary;
+}
+
+scale trough,
+progressbar trough {
+  border-radius: 999px;
+  background: theme.$border;
+}
+
+scale highlight,
+progressbar progress {
+  border-radius: 999px;
+  background: theme.$primary;
+}
+
+scrollbar slider {
+  min-width: 10px;
+  min-height: 10px;
+  border-radius: 999px;
+  background: theme.alpha(theme.$foreground, .42);
+}
+
+scrollbar slider:hover {
+  background: theme.$accent;
+}
+
+notebook > header tab {
+  padding: 10px 16px;
+  border-bottom: 2px solid transparent;
+  color: theme.$muted;
+}
+
+notebook > header tab:checked {
+  border-color: theme.$primary;
+  color: theme.$foreground;
+}
+
+menubar,
+toolbar,
+sidebar,
+stacksidebar,
+navigation-sidebar {
+  background: theme.$surface;
+  border-color: theme.$border;
+}
+
+row,
+listview > row {
+  min-height: 36px;
+  padding: 4px 8px;
+  border-radius: theme.$corner-radius;
+}
+
+row:hover,
+listview > row:hover {
+  background: theme.alpha(theme.$accent, .12);
+}
+
+row:selected,
+listview > row:selected {
+  background: theme.$selection;
+  color: theme.$selected-fg;
+}

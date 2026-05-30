@@ -30,6 +30,7 @@
 !.config/yazi/**
 !Pictures
 !Pictures/**
+!projects
 !projects/walcustom
 !projects/walcustom/**
 !projects/gtktheme

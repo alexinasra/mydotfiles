@@ -1,0 +1,13 @@
+option(
+  'theme_name',
+  type: 'string',
+  value: 'CustomGTK',
+  description: 'Installed GTK theme name',
+)
+
+option(
+  'gnome_shell_version',
+  type: 'string',
+  value: '',
+  description: 'Build GNOME Shell theme for a specific version',
+)

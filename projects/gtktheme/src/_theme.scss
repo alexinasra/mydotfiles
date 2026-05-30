@@ -1,0 +1,116 @@
+$dark-theme: false !default;
+$light-topbar: false !default;
+$compact: false !default;
+$toolkit: "none" !default;
+
+@use "sass:color";
+@use "sass:math";
+@use "color_theme" as colors;
+
+$asset-suffix: "";
+@if $dark-theme {
+  $asset-suffix: "-dark";
+}
+
+$container-padding: 10px;
+$small-size: 30px;
+$medium-size: 44px;
+$large-size: 56px;
+
+@if $compact {
+  $container-padding: 8px;
+  $small-size: 28px;
+  $medium-size: 40px;
+  $large-size: 52px;
+}
+
+$menu-item-height: 40px;
+$menu-item-dense-height: 34px;
+
+@if $compact {
+  $menu-item-height: 36px;
+}
+
+$corner-radius: 8px;
+$circular-radius: 9999px;
+
+$state-duration: 75ms;
+$ripple-duration: 225ms;
+$ripple-fade-out-duration: 300ms;
+$ripple-opacity-fade-out-duration: 1200ms;
+
+@if $toolkit == "st" {
+  $state-duration: 100ms;
+  $ripple-duration: 200ms;
+}
+
+$ease: cubic-bezier(.4, 0, .2, 1);
+$ease-out: cubic-bezier(0, 0, .2, 1);
+$ease-in: cubic-bezier(.4, 0, 1, 1);
+$ease-in-out: cubic-bezier(.4, 0, .6, 1);
+
+$transition: all $state-duration $ease-out;
+$transition-shadow: box-shadow $state-duration $ease-out;
+
+@function solid($value) {
+  @return rgb(
+    math.round(color.channel($value, "red", $space: rgb)),
+    math.round(color.channel($value, "green", $space: rgb)),
+    math.round(color.channel($value, "blue", $space: rgb))
+  );
+}
+
+@function contrast($value) {
+  $brightness: math.div(
+    color.channel($value, "red", $space: rgb) * 299 +
+    color.channel($value, "green", $space: rgb) * 587 +
+    color.channel($value, "blue", $space: rgb) * 114,
+    1000
+  );
+
+  @if $brightness > 150 {
+    @return #111111;
+  }
+
+  @return #ffffff;
+}
+
+$primary: colors.$color0;
+$foreground: colors.$color8;
+$background: solid(color.mix(colors.$color1, $primary, 16%));
+$base: solid(color.mix(colors.$color2, $primary, 18%));
+$surface: solid(color.mix(colors.$color3, $primary, 28%));
+$surface-raised: solid(color.mix(colors.$color4, $surface, 18%));
+$surface-hover: solid(color.mix(colors.$color5, $surface-raised, 16%));
+$surface-active: solid(color.mix(colors.$color6, $surface-raised, 24%));
+$border: solid(color.mix($foreground, $surface, 22%));
+$strong-border: solid(color.mix(colors.$color7, $border, 42%));
+$muted: solid(color.mix($foreground, $background, 62%));
+$accent: colors.$color4;
+$accent-alt: colors.$color6;
+$accent-soft: solid(color.mix($accent, $surface, 24%));
+$selection: colors.$color0;
+$selected-fg: contrast($selection);
+$error: colors.$color5;
+$destructive: $error;
+$success: colors.$color6;
+$warning: colors.$color7;
+$info: colors.$color4;
+$shadow: rgba(black, .18);
+$inset-shadow: rgba(white, .06);
+
+@function alpha($value, $opacity) {
+  @return color.change($value, $alpha: $opacity);
+}
+
+@function hover($value) {
+  @return solid(color.mix(colors.$color5, $value, 14%));
+}
+
+@function active($value) {
+  @return solid(color.mix(colors.$color6, $value, 22%));
+}
+
+@function disabled($value) {
+  @return solid(color.mix($background, $value, 55%));
+}

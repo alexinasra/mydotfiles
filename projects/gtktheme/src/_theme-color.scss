@@ -1,0 +1,206 @@
+@use "sass:color";
+@use "sass:math";
+@use "sass:string";
+@use "theme";
+@use "color-palette" as palette;
+@use "color_theme" as colors;
+
+@function gtkalpha($color, $alpha) {
+  @return string.unquote("alpha(#{$color}, #{$alpha})");
+}
+
+@function _has-alpha($color) {
+  @return if(color.alpha($color) < 1, true, false);
+}
+
+@function _is-dark($color) {
+  $brightness: math.div(
+    color.channel($color, "red", $space: rgb) * 299 +
+    color.channel($color, "green", $space: rgb) * 587 +
+    color.channel($color, "blue", $space: rgb) * 114,
+    1000
+  );
+
+  @return if($brightness < 128, true, false);
+}
+
+$on-light: #000;
+$on-dark: #fff;
+
+@function on($color) {
+  $contrast-color: if(_is-dark($color), $on-dark, $on-light);
+
+  @if color.saturation($color) > 50% or color.alpha($color) < 1 {
+    @return $contrast-color;
+  } @else {
+    @return rgba($contrast-color, .87);
+  }
+}
+
+@function highlight($color) {
+  @if color.lightness($color) >= 80% {
+    @return rgba(white, .4);
+  } @else if color.lightness($color) >= 40% {
+    @return rgba(white, .2);
+  } @else {
+    @return rgba(white, .05);
+  }
+}
+
+@function opacify($color, $on) {
+  @return color.mix(color.change($color, $alpha: 1), $on, color.alpha($color) * 100%);
+}
+
+$surface-z0: theme.$background;
+$surface-z1: theme.$surface;
+$surface-z8: theme.$surface-raised;
+$surface-switch-thumb: theme.$accent-soft;
+$on-surface: theme.$foreground;
+
+$primary-on-light: colors.$color0;
+$primary-on-dark: colors.$color0;
+$primary: colors.$color0;
+$on-primary: on($primary);
+
+$error-on-light: colors.$color5;
+$error-on-dark: colors.$color5;
+$error: $error-on-light;
+$on-error: on($error);
+
+$warning-on-light: colors.$color7;
+$warning-on-dark: colors.$color7;
+$warning: $warning-on-light;
+$on-warning: on($warning);
+
+$success-on-light: colors.$color6;
+$success-on-dark: colors.$color6;
+$success: $success-on-light;
+$on-success: on($success);
+
+$system: colors.$color0;
+$on-system: on($system);
+
+$tooltip: rgba(colors.$color0, .9);
+$on-tooltip: on($tooltip);
+
+$scrim: rgba(black, .6);
+$on-scrim: on($scrim);
+
+$scrim-alt: rgba(black, .3);
+$on-scrim-alt: on($scrim-alt);
+
+$panel: theme.$surface;
+$on-panel: on($panel);
+
+$panel-solid: $panel;
+$on-panel-solid: on($panel-solid);
+
+$titlebar: colors.$color0;
+$titlebar-backdrop: theme.$surface;
+$on-titlebar: on($titlebar);
+
+$titlebar-indicator: currentcolor;
+
+@if theme.$light-topbar {
+  $panel: $scrim;
+  $on-panel: on($panel);
+  $titlebar-indicator: $primary;
+}
+
+@function _overlay($color, $opacity, $on) {
+  $opacity-modifier: 0;
+
+  @if color.saturation($color) > 50% or color.saturation($on) > 50% {
+    $opacity-modifier: .04;
+  }
+
+  @return color.mix(rgba($color, 1), $on, math.percentage($opacity + $opacity-modifier));
+}
+
+@function hover-overlay($color, $opacity-modifier: 0, $on: transparent, $alt: false) {
+  $opacity: .08;
+
+  @if $alt {
+    $opacity: .04;
+  }
+
+  @return _overlay($color: $color, $opacity: $opacity + $opacity-modifier, $on: $on);
+}
+
+@function focus-overlay($color, $opacity-modifier: 0, $on: transparent) {
+  @return _overlay($color: $color, $opacity: .08 + $opacity-modifier, $on: $on);
+}
+
+@function pressed-overlay($color, $opacity-modifier: 0, $on: transparent) {
+  @return _overlay($color: $color, $opacity: .12 + $opacity-modifier, $on: $on);
+}
+
+@function dragged-overlay($color, $opacity-modifier: 0, $on: transparent) {
+  @return _overlay($color: $color, $opacity: .08 + $opacity-modifier, $on: $on);
+}
+
+@function activated-overlay($color, $opacity-modifier: 0, $on: transparent) {
+  @return _overlay($color: $color, $opacity: .12 + $opacity-modifier, $on: $on);
+}
+
+@function selected-overlay($color, $opacity-modifier: 0) {
+  $overlay-color: if($color == $on-surface, $primary, $color);
+
+  @return rgba($overlay-color, .24 + $opacity-modifier);
+}
+
+$selected-overlay: selected-overlay($on-surface);
+
+@function primary($color) {
+  @return if(_is-dark($color), $primary-on-light, $primary-on-dark);
+}
+
+@function error($color) {
+  @return if(_is-dark($color), $error-on-light, $error-on-dark);
+}
+
+@function hint($color) {
+  @return if(_has-alpha($color), rgba($color, .6), rgba($color, .7));
+}
+
+@function disabled($color) {
+  @return if(_has-alpha($color), rgba($color, .38), rgba($color, .5));
+}
+
+@function disabled-hint($color) {
+  @return if(_has-alpha($color), rgba($color, .26), rgba($color, .3));
+}
+
+@function stroke($color) {
+  @return if(_has-alpha($color), rgba($color, .26), rgba($color, .3));
+}
+
+@function disabled-stroke($color) {
+  @return if(_has-alpha($color), rgba($color, .12), rgba($color, .2));
+}
+
+@function divider($color) {
+  @return if(_has-alpha($color), rgba($color, .12), rgba($color, .2));
+}
+
+@function fill($color) {
+  @return if(_has-alpha($color), rgba($color, .08), rgba($color, .08));
+}
+
+@function entry-fill($color) {
+  @return if(_has-alpha($color), rgba($color, .04), rgba($color, .04));
+}
+
+@function scrollbar-thumb($color, $state: null) {
+  @if $state == null {
+    @return if(_has-alpha($color), rgba($color, .38), rgba($color, .5));
+  } @else if $state == "hover" {
+    @return if(_has-alpha($color), rgba($color, .48), rgba($color, .6));
+  } @else if $state == "pressed" {
+    @return if(_has-alpha($color), rgba($color, .6), rgba($color, .7));
+  } @else if $state == "disabled" {
+    @return if(_has-alpha($color), rgba($color, .26), rgba($color, .3));
+  } @else {
+    @error "Invalid type: '#{$state}'";
+  }
+}
