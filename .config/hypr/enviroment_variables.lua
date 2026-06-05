@@ -4,8 +4,8 @@
 
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 --- Nvidia Driver ---
-hl.env("GBM_BACKEND", "nvidia-drm")
-hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
+-- hl.env("GBM_BACKEND", "nvidia-drm")
+-- hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 
 
 
