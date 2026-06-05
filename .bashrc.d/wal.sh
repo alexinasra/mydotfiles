@@ -23,10 +23,10 @@ wal-tile() {
     pkill hyprlauncher
     killall -SIGUSR2 waybar
     pywalfox update
-    pushd $HOME/projects/walcustom
-        cp -v $HOME/.cache/wal/colors.scss src/_colors.scss
-        rm build -rf
-        meson setup -Ddatadir=".themes" --prefix=$HOME build
+    pushd $HOME/projects/gtktheme
+        npm install
+        ./scripts/generate-color-theme.sh
+        meson setup -Ddatadir=".themes" --prefix="$HOME" build --wipe
         ninja -C build install
     popd
     WALL=$(< "$HOME/.cache/wal/wal")
