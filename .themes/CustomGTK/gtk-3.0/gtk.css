@@ -1,23 +1,23 @@
-@define-color error_color #9C718C;
-@define-color destructive_color #9C718C;
-@define-color warning_color #bdbec2;
-@define-color success_color #7A8492;
-@define-color info_color #6D7688;
-@define-color theme_bg_color rgb(49, 43, 14);
-@define-color theme_fg_color #848587;
-@define-color theme_base_color rgb(59, 53, 11);
-@define-color theme_selected_bg_color #160f09;
+@define-color error_color #A69076;
+@define-color destructive_color #A69076;
+@define-color warning_color #c9c2bb;
+@define-color success_color #C78B78;
+@define-color info_color #938774;
+@define-color theme_bg_color rgb(46, 37, 28);
+@define-color theme_fg_color #8c8782;
+@define-color theme_base_color rgb(47, 40, 32);
+@define-color theme_selected_bg_color #1c1610;
 @define-color theme_selected_fg_color #ffffff;
 * {
-  color: #848587;
-  caret-color: #6D7688;
+  color: #8c8782;
+  caret-color: #938774;
   -gtk-icon-style: symbolic;
   -gtk-icon-theme: "Adwaita";
-  outline-color: rgba(109, 118, 136, 0.35);
+  outline-color: rgba(147, 135, 116, 0.35);
   outline-style: solid;
   outline-width: 0;
   text-shadow: none;
-  -gtk-secondary-caret-color: #7A8492;
+  -gtk-secondary-caret-color: #C78B78;
 }
 
 window,
@@ -25,22 +25,22 @@ dialog,
 popover,
 menu,
 .background {
-  background-color: rgb(49, 43, 14);
-  color: #848587;
+  background-color: rgb(46, 37, 28);
+  color: #8c8782;
 }
 
 popover,
 menu,
 tooltip {
-  border: 1px solid rgb(60, 51, 65);
+  border: 1px solid rgb(77, 70, 64);
   border-radius: 8px;
-  background: rgb(52, 44, 61);
+  background: rgb(75, 67, 59);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
 tooltip {
   padding: 6px 10px;
-  background: #160f09;
+  background: #1c1610;
   color: #ffffff;
 }
 
@@ -49,8 +49,8 @@ titlebar,
 .titlebar {
   min-height: 46px;
   padding: 3px 10px;
-  background: linear-gradient(to bottom, #160f09, rgb(44, 41, 39));
-  border-bottom: 1px solid rgb(114, 109, 119);
+  background: linear-gradient(to bottom, #1c1610, rgb(66, 48, 39));
+  border-bottom: 1px solid rgb(129, 122, 116);
   color: #ffffff;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
 }
@@ -91,8 +91,8 @@ menubar > menuitem {
 
 menubar > menuitem:hover,
 menu menuitem:hover {
-  background: rgba(109, 118, 136, 0.14);
-  color: #848587;
+  background: rgba(147, 135, 116, 0.14);
+  color: #8c8782;
 }
 
 menu {
@@ -118,8 +118,8 @@ menu menuitem:focus {
 }
 
 menu menuitem:hover {
-  background: rgba(109, 118, 136, 0.14);
-  border-color: #6D7688;
+  background: rgba(147, 135, 116, 0.14);
+  border-color: #938774;
 }
 
 button,
@@ -128,10 +128,10 @@ modelbutton {
   min-height: 28px;
   min-width: 32px;
   padding: 6px 12px;
-  border: 1px solid rgb(60, 51, 65);
+  border: 1px solid rgb(77, 70, 64);
   border-radius: 8px;
-  background: rgb(52, 44, 61);
-  color: #848587;
+  background: rgb(75, 67, 59);
+  color: #8c8782;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
   transition: background 120ms ease-out, border-color 120ms ease-out, box-shadow 120ms ease-out;
 }
@@ -162,40 +162,40 @@ modelbutton {
 
 button:hover,
 modelbutton:hover {
-  border-color: rgb(114, 109, 119);
-  background: rgb(69, 55, 74);
+  border-color: rgb(129, 122, 116);
+  background: rgb(90, 79, 68);
 }
 
 button:active,
 button:checked {
-  border-color: #6D7688;
-  background: rgb(69, 65, 81);
+  border-color: #938774;
+  background: rgb(105, 84, 74);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.18);
 }
 
 button.suggested-action,
 button.default {
-  border-color: #160f09;
-  background: #160f09;
+  border-color: #1c1610;
+  background: #1c1610;
   color: #ffffff;
 }
 
 button.suggested-action:hover,
 button.default:hover {
-  background: rgb(41, 29, 27);
+  background: rgb(47, 39, 30);
 }
 
 button.destructive-action {
-  border-color: #9C718C;
-  background: #9C718C;
+  border-color: #A69076;
+  background: #A69076;
   color: #ffffff;
 }
 
 button:disabled,
 entry:disabled,
 combobox:disabled {
-  color: rgb(86, 84, 68);
-  background: rgb(45, 36, 28);
+  color: rgb(88, 81, 74);
+  background: rgb(52, 44, 36);
 }
 
 entry,
@@ -204,23 +204,23 @@ combobox,
 treeview.view {
   min-height: 28px;
   padding: 6px 10px;
-  border: 1px solid rgb(60, 51, 65);
+  border: 1px solid rgb(77, 70, 64);
   border-radius: 8px;
-  background: rgb(59, 53, 11);
-  color: #848587;
+  background: rgb(47, 40, 32);
+  color: #8c8782;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12);
 }
 
 entry:focus,
 spinbutton:focus,
 combobox:focus {
-  border-color: #6D7688;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), 0 0 0 2px rgba(109, 118, 136, 0.24);
+  border-color: #938774;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), 0 0 0 2px rgba(147, 135, 116, 0.24);
 }
 
 selection,
 *:selected {
-  background-color: #160f09;
+  background-color: #1c1610;
   color: #ffffff;
 }
 
@@ -228,8 +228,8 @@ check,
 radio {
   min-width: 16px;
   min-height: 16px;
-  border: 1px solid rgb(60, 51, 65);
-  background: rgb(59, 53, 11);
+  border: 1px solid rgb(77, 70, 64);
+  background: rgb(47, 40, 32);
 }
 
 check {
@@ -242,8 +242,8 @@ radio {
 
 check:checked,
 radio:checked {
-  background: #160f09;
-  border-color: #160f09;
+  background: #1c1610;
+  border-color: #1c1610;
   color: #ffffff;
 }
 
@@ -251,57 +251,57 @@ switch {
   min-width: 48px;
   min-height: 28px;
   border-radius: 999px;
-  background: rgb(60, 51, 65);
+  background: rgb(77, 70, 64);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 switch:checked {
-  background: #160f09;
+  background: #1c1610;
 }
 
 trough {
   border-radius: 999px;
-  background: rgb(60, 51, 65);
+  background: rgb(77, 70, 64);
 }
 
 progress,
 highlight {
   border-radius: 999px;
-  background: #160f09;
+  background: #1c1610;
 }
 
 scrollbar slider {
   min-width: 8px;
   min-height: 8px;
   border-radius: 999px;
-  background: rgba(132, 133, 135, 0.42);
+  background: rgba(140, 135, 130, 0.42);
 }
 
 scrollbar slider:hover {
-  background: #6D7688;
+  background: #938774;
 }
 
 notebook > header tab {
   padding: 8px 12px;
   border-bottom: 2px solid transparent;
-  color: rgb(100, 99, 89);
+  color: rgb(104, 98, 91);
 }
 
 notebook > header tab:checked {
-  border-color: #160f09;
-  color: #848587;
+  border-color: #1c1610;
+  color: #8c8782;
 }
 
 toolbar,
 sidebar,
 stacksidebar {
-  background: rgb(40, 28, 45);
-  border-color: rgb(60, 51, 65);
+  background: rgb(59, 52, 46);
+  border-color: rgb(77, 70, 64);
 }
 
 menubar {
-  background: rgb(40, 28, 45);
-  border-color: rgb(60, 51, 65);
+  background: rgb(59, 52, 46);
+  border-color: rgb(77, 70, 64);
 }
 
 row,
@@ -314,11 +314,11 @@ treeview.view {
 row:hover,
 treeview.view:hover,
 modelbutton:hover {
-  background: rgba(109, 118, 136, 0.12);
+  background: rgba(147, 135, 116, 0.12);
 }
 
 row:selected,
 treeview.view:selected {
-  background: #160f09;
+  background: #1c1610;
   color: #ffffff;
 }
