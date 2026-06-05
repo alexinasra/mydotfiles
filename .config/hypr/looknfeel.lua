@@ -23,7 +23,6 @@ hl.config({
 
         layout = GENERAL_LAYOUT,
     },
-    
     decoration = {
         rounding       = GENERAL_DECORATION_ROUNDING,
         rounding_power = GENERAL_DECORATION_ROUNDING_POWER,
