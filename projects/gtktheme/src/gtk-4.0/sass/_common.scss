@@ -39,7 +39,7 @@ tooltip {
 }
 
 tooltip {
-  padding: 8px 12px;
+  padding: 6px 10px;
   background: theme.$primary;
   color: theme.$selected-fg;
 }
@@ -48,7 +48,7 @@ headerbar,
 windowhandle,
 .titlebar {
   min-height: 48px;
-  padding: 0 12px;
+  padding: 3px 10px;
   background: linear-gradient(to bottom, theme.$primary, theme.active(theme.$primary));
   border-bottom: 1px solid theme.$strong-border;
   color: theme.$selected-fg;
@@ -61,17 +61,88 @@ windowhandle *,
   color: inherit;
 }
 
+headerbar button,
+headerbar menubutton,
+headerbar .linked > button,
+windowhandle button,
+windowhandle menubutton,
+.titlebar button,
+.titlebar menubutton {
+  margin: 1px 2px;
+}
+
+headerbar menubutton > button,
+windowhandle menubutton > button,
+.titlebar menubutton > button {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+popover contents {
+  padding: 2px;
+}
+
+popover modelbutton,
+popover button.flat {
+  min-height: 28px;
+  padding: 4px 10px;
+  margin: 1px 0;
+  border-radius: theme.$corner-radius;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+popover modelbutton:hover,
+popover button.flat:hover {
+  background: theme.alpha(theme.$accent, .14);
+  border-color: theme.$accent;
+  color: theme.$foreground;
+}
+
+popover modelbutton:active,
+popover button.flat:active,
+popover modelbutton:checked,
+popover button.flat:checked {
+  background: theme.alpha(theme.$accent, .18);
+  border-color: theme.$accent;
+}
+
 button,
 menubutton > button {
   min-height: 30px;
-  min-width: 36px;
-  padding: 8px 14px;
+  min-width: 34px;
+  padding: 6px 12px;
   border: 1px solid theme.$border;
   border-radius: theme.$corner-radius;
   background: theme.$surface-raised;
   color: theme.$foreground;
   box-shadow: inset 0 1px theme.$inset-shadow;
   transition: background 120ms ease-out, border-color 120ms ease-out, box-shadow 120ms ease-out;
+}
+
+.linked > button,
+.linked > menubutton > button {
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0;
+}
+
+.linked > button:not(:first-child),
+.linked > menubutton:not(:first-child) > button {
+  margin-left: -1px;
+}
+
+.linked > button:first-child,
+.linked > menubutton:first-child > button {
+  border-top-left-radius: theme.$corner-radius;
+  border-bottom-left-radius: theme.$corner-radius;
+}
+
+.linked > button:last-child,
+.linked > menubutton:last-child > button {
+  border-top-right-radius: theme.$corner-radius;
+  border-bottom-right-radius: theme.$corner-radius;
 }
 
 button:hover {
@@ -118,7 +189,7 @@ textview,
 listview,
 columnview {
   min-height: 30px;
-  padding: 8px 12px;
+  padding: 6px 10px;
   border: 1px solid theme.$border;
   border-radius: theme.$corner-radius;
   background: theme.$base;
@@ -163,8 +234,8 @@ radiobutton radio:checked {
 }
 
 switch {
-  min-width: 52px;
-  min-height: 30px;
+  min-width: 48px;
+  min-height: 28px;
   border-radius: 999px;
   background: theme.$border;
   box-shadow: inset 0 1px 2px theme.alpha(black, .2);
@@ -187,8 +258,8 @@ progressbar progress {
 }
 
 scrollbar slider {
-  min-width: 10px;
-  min-height: 10px;
+  min-width: 8px;
+  min-height: 8px;
   border-radius: 999px;
   background: theme.alpha(theme.$foreground, .42);
 }
@@ -198,7 +269,7 @@ scrollbar slider:hover {
 }
 
 notebook > header tab {
-  padding: 10px 16px;
+  padding: 8px 12px;
   border-bottom: 2px solid transparent;
   color: theme.$muted;
 }
@@ -219,8 +290,8 @@ navigation-sidebar {
 
 row,
 listview > row {
-  min-height: 36px;
-  padding: 4px 8px;
+  min-height: 34px;
+  padding: 3px 6px;
   border-radius: theme.$corner-radius;
 }
 

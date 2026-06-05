@@ -1,23 +1,23 @@
-@define-color error_color #78E10F;
-@define-color destructive_color #78E10F;
-@define-color warning_color #bfeb83;
-@define-color success_color #64AA4C;
-@define-color info_color #6AD30B;
-@define-color theme_bg_color rgb(18, 66, 10);
-@define-color theme_fg_color #85a45b;
-@define-color theme_base_color rgb(19, 72, 8);
-@define-color theme_selected_bg_color #073107;
+@define-color error_color #9C718C;
+@define-color destructive_color #9C718C;
+@define-color warning_color #bdbec2;
+@define-color success_color #7A8492;
+@define-color info_color #6D7688;
+@define-color theme_bg_color rgb(49, 43, 14);
+@define-color theme_fg_color #848587;
+@define-color theme_base_color rgb(59, 53, 11);
+@define-color theme_selected_bg_color #160f09;
 @define-color theme_selected_fg_color #ffffff;
 * {
-  color: #85a45b;
-  caret-color: #6AD30B;
+  color: #848587;
+  caret-color: #6D7688;
   -gtk-icon-style: symbolic;
   -gtk-icon-theme: "Adwaita";
-  outline-color: rgba(106, 211, 11, 0.35);
+  outline-color: rgba(109, 118, 136, 0.35);
   outline-style: solid;
   outline-width: 0;
   text-shadow: none;
-  -gtk-secondary-caret-color: #64AA4C;
+  -gtk-secondary-caret-color: #7A8492;
 }
 
 window,
@@ -25,22 +25,22 @@ dialog,
 popover,
 menu,
 .background {
-  background-color: rgb(18, 66, 10);
-  color: #85a45b;
+  background-color: rgb(49, 43, 14);
+  color: #848587;
 }
 
 popover,
 menu,
 tooltip {
-  border: 1px solid rgb(52, 107, 26);
+  border: 1px solid rgb(60, 51, 65);
   border-radius: 8px;
-  background: rgb(43, 113, 9);
+  background: rgb(52, 44, 61);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
 tooltip {
-  padding: 8px 12px;
-  background: #073107;
+  padding: 6px 10px;
+  background: #160f09;
   color: #ffffff;
 }
 
@@ -48,9 +48,9 @@ headerbar,
 titlebar,
 .titlebar {
   min-height: 46px;
-  padding: 0 12px;
-  background: linear-gradient(to bottom, #073107, rgb(27, 76, 22));
-  border-bottom: 1px solid rgb(110, 161, 70);
+  padding: 3px 10px;
+  background: linear-gradient(to bottom, #160f09, rgb(44, 41, 39));
+  border-bottom: 1px solid rgb(114, 109, 119);
   color: #ffffff;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
 }
@@ -61,56 +61,141 @@ titlebar *,
   color: inherit;
 }
 
+headerbar button,
+headerbar menubutton,
+headerbar .linked > button,
+titlebar button,
+titlebar menubutton,
+.titlebar button,
+.titlebar menubutton {
+  margin: 1px 2px;
+}
+
+headerbar menubutton > button,
+titlebar menubutton > button,
+.titlebar menubutton > button {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+menubar {
+  min-height: 36px;
+  padding: 2px 6px;
+}
+
+menubar > menuitem {
+  margin: 0 2px;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+menubar > menuitem:hover,
+menu menuitem:hover {
+  background: rgba(109, 118, 136, 0.14);
+  color: #848587;
+}
+
+menu {
+  padding: 2px;
+}
+
+menu menuitem,
+modelbutton {
+  min-height: 26px;
+  padding: 4px 10px;
+  margin: 1px 0;
+  border-radius: 8px;
+}
+
+menu menuitem,
+menu menuitem:hover,
+menu menuitem:checked,
+menu menuitem:selected,
+menu menuitem:focus {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+menu menuitem:hover {
+  background: rgba(109, 118, 136, 0.14);
+  border-color: #6D7688;
+}
+
 button,
 button.flat,
 modelbutton {
   min-height: 28px;
-  min-width: 34px;
-  padding: 7px 14px;
-  border: 1px solid rgb(52, 107, 26);
+  min-width: 32px;
+  padding: 6px 12px;
+  border: 1px solid rgb(60, 51, 65);
   border-radius: 8px;
-  background: rgb(43, 113, 9);
-  color: #85a45b;
+  background: rgb(52, 44, 61);
+  color: #848587;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
   transition: background 120ms ease-out, border-color 120ms ease-out, box-shadow 120ms ease-out;
 }
 
+.linked > button,
+.linked > menubutton > button {
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0;
+}
+
+.linked > button:not(:first-child),
+.linked > menubutton:not(:first-child) > button {
+  margin-left: -1px;
+}
+
+.linked > button:first-child,
+.linked > menubutton:first-child > button {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.linked > button:last-child,
+.linked > menubutton:last-child > button {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
 button:hover,
 modelbutton:hover {
-  border-color: rgb(110, 161, 70);
-  background: rgb(55, 131, 10);
+  border-color: rgb(114, 109, 119);
+  background: rgb(69, 55, 74);
 }
 
 button:active,
 button:checked {
-  border-color: #6AD30B;
-  background: rgb(57, 127, 25);
+  border-color: #6D7688;
+  background: rgb(69, 65, 81);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.18);
 }
 
 button.suggested-action,
 button.default {
-  border-color: #073107;
-  background: #073107;
+  border-color: #160f09;
+  background: #160f09;
   color: #ffffff;
 }
 
 button.suggested-action:hover,
 button.default:hover {
-  background: rgb(23, 74, 8);
+  background: rgb(41, 29, 27);
 }
 
 button.destructive-action {
-  border-color: #78E10F;
-  background: #78E10F;
+  border-color: #9C718C;
+  background: #9C718C;
   color: #ffffff;
 }
 
 button:disabled,
 entry:disabled,
 combobox:disabled {
-  color: rgb(70, 110, 46);
-  background: rgb(23, 77, 9);
+  color: rgb(86, 84, 68);
+  background: rgb(45, 36, 28);
 }
 
 entry,
@@ -118,24 +203,24 @@ spinbutton,
 combobox,
 treeview.view {
   min-height: 28px;
-  padding: 7px 12px;
-  border: 1px solid rgb(52, 107, 26);
+  padding: 6px 10px;
+  border: 1px solid rgb(60, 51, 65);
   border-radius: 8px;
-  background: rgb(19, 72, 8);
-  color: #85a45b;
+  background: rgb(59, 53, 11);
+  color: #848587;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12);
 }
 
 entry:focus,
 spinbutton:focus,
 combobox:focus {
-  border-color: #6AD30B;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), 0 0 0 2px rgba(106, 211, 11, 0.24);
+  border-color: #6D7688;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), 0 0 0 2px rgba(109, 118, 136, 0.24);
 }
 
 selection,
 *:selected {
-  background-color: #073107;
+  background-color: #160f09;
   color: #ffffff;
 }
 
@@ -143,8 +228,8 @@ check,
 radio {
   min-width: 16px;
   min-height: 16px;
-  border: 1px solid rgb(52, 107, 26);
-  background: rgb(19, 72, 8);
+  border: 1px solid rgb(60, 51, 65);
+  background: rgb(59, 53, 11);
 }
 
 check {
@@ -157,79 +242,83 @@ radio {
 
 check:checked,
 radio:checked {
-  background: #073107;
-  border-color: #073107;
+  background: #160f09;
+  border-color: #160f09;
   color: #ffffff;
 }
 
 switch {
-  min-width: 52px;
-  min-height: 30px;
+  min-width: 48px;
+  min-height: 28px;
   border-radius: 999px;
-  background: rgb(52, 107, 26);
+  background: rgb(60, 51, 65);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 switch:checked {
-  background: #073107;
+  background: #160f09;
 }
 
 trough {
   border-radius: 999px;
-  background: rgb(52, 107, 26);
+  background: rgb(60, 51, 65);
 }
 
 progress,
 highlight {
   border-radius: 999px;
-  background: #073107;
+  background: #160f09;
 }
 
 scrollbar slider {
-  min-width: 10px;
-  min-height: 10px;
+  min-width: 8px;
+  min-height: 8px;
   border-radius: 999px;
-  background: rgba(133, 164, 91, 0.42);
+  background: rgba(132, 133, 135, 0.42);
 }
 
 scrollbar slider:hover {
-  background: #6AD30B;
+  background: #6D7688;
 }
 
 notebook > header tab {
-  padding: 10px 16px;
+  padding: 8px 12px;
   border-bottom: 2px solid transparent;
-  color: rgb(89, 127, 60);
+  color: rgb(100, 99, 89);
 }
 
 notebook > header tab:checked {
-  border-color: #073107;
-  color: #85a45b;
+  border-color: #160f09;
+  color: #848587;
 }
 
-menubar,
 toolbar,
 sidebar,
 stacksidebar {
-  background: rgb(29, 91, 8);
-  border-color: rgb(52, 107, 26);
+  background: rgb(40, 28, 45);
+  border-color: rgb(60, 51, 65);
+}
+
+menubar {
+  background: rgb(40, 28, 45);
+  border-color: rgb(60, 51, 65);
 }
 
 row,
 treeview.view {
-  min-height: 34px;
-  padding: 4px 8px;
+  min-height: 32px;
+  padding: 3px 6px;
   border-radius: 8px;
 }
 
 row:hover,
 treeview.view:hover,
 modelbutton:hover {
-  background: rgba(106, 211, 11, 0.12);
+  background: rgba(109, 118, 136, 0.12);
 }
 
 row:selected,
 treeview.view:selected {
-  background: #073107;
+  background: #160f09;
   color: #ffffff;
 }

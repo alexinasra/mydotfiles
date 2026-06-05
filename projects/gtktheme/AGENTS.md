@@ -2,7 +2,7 @@
 
 ## Project
 
-This repo is a Sass-based full desktop theme. It builds one light/default theme variant across GTK 2, GTK 3, GTK 4, GNOME Shell, Cinnamon, Metacity, Plank, Unity, and XFWM. Do not add dark variants unless explicitly requested.
+This repo is a Sass-based GTK theme. It builds one light/default theme variant for GTK 3 and GTK 4. Do not add dark variants or non-GTK desktop theme modules unless explicitly requested.
 
 ## Important Files
 
@@ -10,8 +10,6 @@ This repo is a Sass-based full desktop theme. It builds one light/default theme 
 - `src/_theme.scss` maps generated palette values into semantic theme variables.
 - `src/gtk-3.0/sass/_common.scss` contains GTK 3 selectors.
 - `src/gtk-4.0/sass/_common.scss` contains GTK 4 selectors.
-- `src/gnome-shell` and `src/cinnamon` contain shell Sass and assets.
-- `src/gtk-2.0`, `src/metacity-1`, `src/plank`, `src/unity`, and `src/xfwm4` contain desktop integration assets.
 - `meson.build` and `src/**/meson.build` control compilation and install paths.
 
 ## Commands

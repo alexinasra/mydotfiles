@@ -1,6 +1,5 @@
 gtk4_scss = files('gtk.scss')
 gtk4_dependencies = files([
-  '../_color-palette.scss',
   '../_color_theme.scss',
   '../_theme.scss',
   'sass/_common.scss',
