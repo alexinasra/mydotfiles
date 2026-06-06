@@ -29,5 +29,6 @@ wal-tile() {
         meson setup -Ddatadir=".themes" --prefix="$HOME" build --wipe
         ninja -C build install
     popd
+    gsettings set org.gnome.desktop.interface gtk-theme CustomGTK
     WALL=$(< "$HOME/.cache/wal/wal")
  }
