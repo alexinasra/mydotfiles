@@ -33,6 +33,5 @@
 !projects
 !projects/gtktheme
 !projects/gtktheme/**
-!projects/oreo-cursors
 !projects/oreo-cursors/**
 **.swp
