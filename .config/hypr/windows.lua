@@ -72,3 +72,9 @@ hl.window_rule({
   match = { title = "Qalculate!" },
   float = true,
 })
+
+hl.window_rule({
+  match = { class= "qemu-system-x86_64" },
+  float = true
+})
+
