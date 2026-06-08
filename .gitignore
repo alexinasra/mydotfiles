@@ -1,5 +1,4 @@
 *
-**.swp
 !.gitignore
 !.profile
 !.bash_profile
@@ -36,4 +35,4 @@
 !projects/walcustom/**
 !projects/gtktheme
 !projects/gtktheme/**
-
+**.swp
