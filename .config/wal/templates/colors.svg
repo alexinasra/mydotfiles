@@ -118,7 +118,7 @@
        inkscape:tile-y0="26.390375"
        inkscape:label="color9" />
     <rect
-       style="fill:{color8};fill-opacity:1;stroke-width:0.40083"
+       style="fill:{color3};fill-opacity:1;stroke-width:0.40083"
        id="use34"
        width="35.726898"
        height="35.726898"
@@ -126,9 +126,9 @@
        y="104.98956"
        inkscape:tile-x0="26.951871"
        inkscape:tile-y0="26.390375"
-       inkscape:label="color8" />
+       inkscape:label="color3" />
     <rect
-       style="fill:{color7};fill-opacity:1;stroke-width:0.40083"
+       style="fill:{color3};fill-opacity:1;stroke-width:0.40083"
        id="use45"
        width="35.726898"
        height="35.726898"
@@ -136,7 +136,7 @@
        y="65.689964"
        inkscape:tile-x0="26.951871"
        inkscape:tile-y0="26.390375"
-       inkscape:label="color7" />
+       inkscape:label="color3" />
     <rect
        style="fill:{color6};fill-opacity:1;stroke-width:0.40083"
        id="use41"
@@ -158,7 +158,7 @@
        inkscape:tile-y0="26.390375"
        inkscape:label="color5" />
     <rect
-       style="fill:{color4};fill-opacity:1;stroke-width:0.40083"
+       style="fill:{color3};fill-opacity:1;stroke-width:0.40083"
        id="use33"
        width="35.726898"
        height="35.726898"
@@ -166,7 +166,7 @@
        y="65.689964"
        inkscape:tile-x0="26.951871"
        inkscape:tile-y0="26.390375"
-       inkscape:label="color4" />
+       inkscape:label="color3" />
     <rect
        style="fill:{color3};fill-opacity:1;stroke-width:0.40083"
        id="use44"
