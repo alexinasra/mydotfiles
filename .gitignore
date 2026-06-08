@@ -31,8 +31,6 @@
 !Pictures
 !Pictures/**
 !projects
-!projects/walcustom
-!projects/walcustom/**
 !projects/gtktheme
 !projects/gtktheme/**
 **.swp
