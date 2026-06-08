@@ -3,41 +3,41 @@
 @define-color warning_color #FAAD14;
 @define-color success_color #52C41A;
 @define-color info_color #1890FF;
-@define-color theme_bg_color rgb(32, 24, 7);
-@define-color theme_fg_color #a18658;
-@define-color theme_base_color rgb(37, 26, 3);
-@define-color theme_selected_bg_color #100c02;
+@define-color theme_bg_color rgb(24, 26, 42);
+@define-color theme_fg_color #9fa2a1;
+@define-color theme_base_color rgb(31, 37, 42);
+@define-color theme_selected_bg_color #0a031e;
 @define-color theme_selected_fg_color #ffffff;
 * {
-  color: #a18658;
-  caret-color: #AA6F0E;
+  color: #9fa2a1;
+  caret-color: #DD7686;
   -gtk-icon-theme: "Adwaita";
-  outline-color: rgba(170, 111, 14, 0.35);
+  outline-color: rgba(221, 118, 134, 0.35);
   outline-style: solid;
   outline-width: 0;
   text-shadow: none;
-  -gtk-secondary-caret-color: #C59B1E;
+  -gtk-secondary-caret-color: #EED5D2;
 }
 
 window,
 dialog,
 popover,
 .background {
-  background: rgb(32, 24, 7);
-  color: #a18658;
+  background: rgb(24, 26, 42);
+  color: #9fa2a1;
 }
 
 popover,
 tooltip {
-  border: 1px solid rgb(77, 58, 22);
+  border: 1px solid rgb(69, 80, 73);
   border-radius: 8px;
-  background: rgb(74, 50, 5);
+  background: rgb(76, 68, 63);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
 tooltip {
   padding: 6px 10px;
-  background: #100c02;
+  background: #0a031e;
   color: #ffffff;
 }
 
@@ -46,8 +46,8 @@ windowhandle,
 .titlebar {
   min-height: 48px;
   padding: 3px 10px;
-  background: linear-gradient(to bottom, #100c02, rgb(56, 43, 8));
-  border-bottom: 1px solid rgb(142, 114, 66);
+  background: linear-gradient(to bottom, #0a031e, rgb(60, 49, 70));
+  border-bottom: 1px solid rgb(136, 144, 139);
   color: #ffffff;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
 }
@@ -92,17 +92,17 @@ popover button.flat {
 
 popover modelbutton:hover,
 popover button.flat:hover {
-  background: rgba(170, 111, 14, 0.14);
-  border-color: #AA6F0E;
-  color: #a18658;
+  background: rgba(221, 118, 134, 0.14);
+  border-color: #DD7686;
+  color: #9fa2a1;
 }
 
 popover modelbutton:active,
 popover button.flat:active,
 popover modelbutton:checked,
 popover button.flat:checked {
-  background: rgba(170, 111, 14, 0.18);
-  border-color: #AA6F0E;
+  background: rgba(221, 118, 134, 0.18);
+  border-color: #DD7686;
 }
 
 button,
@@ -110,10 +110,10 @@ menubutton > button {
   min-height: 30px;
   min-width: 34px;
   padding: 6px 12px;
-  border: 1px solid rgb(77, 58, 22);
+  border: 1px solid rgb(69, 80, 73);
   border-radius: 8px;
-  background: rgb(74, 50, 5);
-  color: #a18658;
+  background: rgb(76, 68, 63);
+  color: #9fa2a1;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
   transition: background 120ms ease-out, border-color 120ms ease-out, box-shadow 120ms ease-out;
 }
@@ -143,27 +143,27 @@ menubutton > button {
 }
 
 button:hover {
-  border-color: rgb(142, 114, 66);
-  background: rgb(95, 61, 6);
+  border-color: rgb(136, 144, 139);
+  background: rgb(99, 85, 80);
 }
 
 button:active,
 button:checked {
-  border-color: #AA6F0E;
-  background: rgb(104, 75, 11);
+  border-color: #DD7686;
+  background: rgb(115, 103, 98);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.18);
 }
 
 button.suggested-action,
 button.default {
-  border-color: #100c02;
-  background: #100c02;
+  border-color: #0a031e;
+  background: #0a031e;
   color: #ffffff;
 }
 
 button.suggested-action:hover,
 button.default:hover {
-  background: rgb(43, 27, 4);
+  background: rgb(40, 27, 49);
 }
 
 button.destructive-action {
@@ -175,8 +175,8 @@ button.destructive-action {
 button:disabled,
 entry:disabled,
 dropdown:disabled {
-  color: rgb(90, 74, 43);
-  background: rgb(41, 30, 5);
+  color: rgb(85, 87, 96);
+  background: rgb(33, 40, 45);
 }
 
 entry,
@@ -187,23 +187,23 @@ listview,
 columnview {
   min-height: 30px;
   padding: 6px 10px;
-  border: 1px solid rgb(77, 58, 22);
+  border: 1px solid rgb(69, 80, 73);
   border-radius: 8px;
-  background: rgb(37, 26, 3);
-  color: #a18658;
+  background: rgb(31, 37, 42);
+  color: #9fa2a1;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12);
 }
 
 entry:focus,
 spinbutton:focus,
 dropdown:focus {
-  border-color: #AA6F0E;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), 0 0 0 2px rgba(170, 111, 14, 0.24);
+  border-color: #DD7686;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), 0 0 0 2px rgba(221, 118, 134, 0.24);
 }
 
 selection,
 *:selected {
-  background: #100c02;
+  background: #0a031e;
   color: #ffffff;
 }
 
@@ -211,8 +211,8 @@ checkbutton check,
 radiobutton radio {
   min-width: 16px;
   min-height: 16px;
-  border: 1px solid rgb(77, 58, 22);
-  background: rgb(37, 26, 3);
+  border: 1px solid rgb(69, 80, 73);
+  background: rgb(31, 37, 42);
 }
 
 checkbutton check {
@@ -225,8 +225,8 @@ radiobutton radio {
 
 checkbutton check:checked,
 radiobutton radio:checked {
-  background: #100c02;
-  border-color: #100c02;
+  background: #0a031e;
+  border-color: #0a031e;
   color: #ffffff;
 }
 
@@ -234,46 +234,46 @@ switch {
   min-width: 48px;
   min-height: 28px;
   border-radius: 999px;
-  background: rgb(77, 58, 22);
+  background: rgb(69, 80, 73);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 switch:checked {
-  background: #100c02;
+  background: #0a031e;
 }
 
 scale trough,
 progressbar trough {
   border-radius: 999px;
-  background: rgb(77, 58, 22);
+  background: rgb(69, 80, 73);
 }
 
 scale highlight,
 progressbar progress {
   border-radius: 999px;
-  background: #100c02;
+  background: #0a031e;
 }
 
 scrollbar slider {
   min-width: 8px;
   min-height: 8px;
   border-radius: 999px;
-  background: rgba(161, 134, 88, 0.42);
+  background: rgba(159, 162, 161, 0.42);
 }
 
 scrollbar slider:hover {
-  background: #AA6F0E;
+  background: #DD7686;
 }
 
 notebook > header tab {
   padding: 8px 12px;
   border-bottom: 2px solid transparent;
-  color: rgb(112, 92, 57);
+  color: rgb(108, 110, 116);
 }
 
 notebook > header tab:checked {
-  border-color: #100c02;
-  color: #a18658;
+  border-color: #0a031e;
+  color: #9fa2a1;
 }
 
 menubar,
@@ -281,8 +281,8 @@ toolbar,
 sidebar,
 stacksidebar,
 navigation-sidebar {
-  background: rgb(53, 37, 3);
-  border-color: rgb(77, 58, 22);
+  background: rgb(44, 57, 48);
+  border-color: rgb(69, 80, 73);
 }
 
 row,
@@ -294,11 +294,11 @@ listview > row {
 
 row:hover,
 listview > row:hover {
-  background: rgba(170, 111, 14, 0.12);
+  background: rgba(221, 118, 134, 0.12);
 }
 
 row:selected,
 listview > row:selected {
-  background: #100c02;
+  background: #0a031e;
   color: #ffffff;
 }
