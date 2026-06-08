@@ -1,8 +1,8 @@
-@define-color error_color #CE790D;
-@define-color destructive_color #CE790D;
-@define-color warning_color #e7c07e;
-@define-color success_color #C59B1E;
-@define-color info_color #AA6F0E;
+@define-color error_color #FF4D4F;
+@define-color destructive_color #FF4D4F;
+@define-color warning_color #FAAD14;
+@define-color success_color #52C41A;
+@define-color info_color #1890FF;
 @define-color theme_bg_color rgb(32, 24, 7);
 @define-color theme_fg_color #a18658;
 @define-color theme_base_color rgb(37, 26, 3);
@@ -186,8 +186,8 @@ button.default:hover {
 }
 
 button.destructive-action {
-  border-color: #CE790D;
-  background: #CE790D;
+  border-color: #FF4D4F;
+  background: #FF4D4F;
   color: #ffffff;
 }
 
