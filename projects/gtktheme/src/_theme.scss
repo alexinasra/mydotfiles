@@ -91,11 +91,11 @@ $accent-alt: colors.$color6;
 $accent-soft: solid(color.mix($accent, $surface, 24%));
 $selection: colors.$color0;
 $selected-fg: contrast($selection);
-$error: colors.$color5;
+$error: #FF4D4F;
 $destructive: $error;
-$success: colors.$color6;
-$warning: colors.$color7;
-$info: colors.$color4;
+$success: #52C41A;
+$warning: #FAAD14;
+$info: #1890FF;
 $shadow: rgba(black, .18);
 $inset-shadow: rgba(white, .06);
 
