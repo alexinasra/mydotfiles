@@ -23,6 +23,11 @@ wal-tile() {
     pkill hyprlauncher
     killall -SIGUSR2 waybar
     pywalfox update
+    pushd $HOME/projects/oreo-cursors
+      make build
+      cp dist/oreo_custom_cursors $HOME/.icons -rv
+      hyprctl setcursor JUST_TO_REFRESH 24 && sleep 1 && hyprctl setcursor oreo_custom_cursors 24
+    popd
     pushd $HOME/projects/gtktheme
         npm install
         ./scripts/generate-color-theme.sh
