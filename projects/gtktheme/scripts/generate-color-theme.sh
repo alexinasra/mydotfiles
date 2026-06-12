@@ -34,7 +34,7 @@ if [[ -f "$input" ]]; then
   done < "$input"
 fi
 
-colors[foreground]="${colors[color8]}"
+colors[foreground]="${colors[color15]}"
 colors[cursor]="${colors[color0]}"
 
 {

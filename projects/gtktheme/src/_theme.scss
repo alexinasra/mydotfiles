@@ -75,20 +75,25 @@ $transition-shadow: box-shadow $state-duration $ease-out;
   @return #ffffff;
 }
 
-$primary: colors.$color0;
-$foreground: colors.$color8;
-$background: solid(color.mix(colors.$color1, $primary, 16%));
-$base: solid(color.mix(colors.$color2, $primary, 18%));
-$surface: solid(color.mix(colors.$color3, $primary, 28%));
-$surface-raised: solid(color.mix(colors.$color4, $surface, 18%));
-$surface-hover: solid(color.mix(colors.$color5, $surface-raised, 16%));
-$surface-active: solid(color.mix(colors.$color6, $surface-raised, 24%));
+$primary: colors.$color1;
+$foreground: colors.$foreground;
+$background: colors.$background;
+$base: solid(color.mix(colors.$background, $primary, 92%));
+$surface: solid(color.mix(colors.$background, $base, 18%));
+$surface-raised: solid(color.mix(colors.$background, $surface, 8%));
+$surface-hover: solid(color.mix(colors.$background, $surface-raised, 6%));
+$surface-active: solid(color.mix(colors.$background, $surface-raised, 14%));
+
+$border-radius: 4px;
+
 $border: solid(color.mix($foreground, $surface, 22%));
 $strong-border: solid(color.mix(colors.$color7, $border, 42%));
+
 $muted: solid(color.mix($foreground, $background, 62%));
-$accent: colors.$color4;
-$accent-alt: colors.$color6;
+$accent: colors.$color2;
+$accent-alt: colors.$color12;
 $accent-soft: solid(color.mix($accent, $surface, 24%));
+
 $selection: colors.$color0;
 $selected-fg: contrast($selection);
 $error: #FF4D4F;
@@ -96,8 +101,8 @@ $destructive: $error;
 $success: #52C41A;
 $warning: #FAAD14;
 $info: #1890FF;
-$shadow: rgba(black, .18);
-$inset-shadow: rgba(white, .06);
+$shadow: rgba($background, .18);
+$inset-shadow: rgba($foreground, .06);
 
 @function alpha($value, $opacity) {
   @return color.change($value, $alpha: $opacity);
