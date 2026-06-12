@@ -1,0 +1,17 @@
+@use '../../theme.scss' as theme;
+check {
+  min-width: 16px;
+  min-height: 16px;
+  border: 1px solid theme.$border;
+  background: theme.$base;
+}
+
+check {
+  border-radius: 4px;
+}
+
+check:checked {
+  background: theme.$primary;
+  border-color: theme.$primary;
+  color: theme.$selected-fg;
+}

@@ -1,0 +1,47 @@
+@use '../../theme' as theme;
+
+scrollbar slider {
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: 999px;
+  background: theme.alpha(theme.$foreground, .42);
+}
+
+scrollbar slider:hover {
+  background: theme.$accent;
+}
+
+/* Ensure the buttons have visible dimensions and remove default extra padding */
+scrollbar button {
+    min-width: 16px;
+    min-height: 16px;
+    padding: 0;
+    margin: 2px;
+}
+
+/* Optional: Add hover and active feedback states for the buttons */
+scrollbar button:hover {
+    background-color: #d0d0d0;
+}
+
+scrollbar button:active {
+    background-color: #a0a0a0;
+}
+
+/* Inject standard arrow icon themes into the vertical stepper buttons */
+scrollbar.vertical button.up {
+    -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
+}
+scrollbar.vertical button.down {
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
+
+/* Inject standard arrow icon themes into the horizontal stepper buttons */
+scrollbar.horizontal button.up {
+    -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
+}
+scrollbar.horizontal button.down {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+
+
