@@ -21,7 +21,6 @@ wal-tile() {
     pkill hyprpaper
     hyprpaper & disown 
     pkill hyprlauncher
-    killall -SIGUSR2 waybar
     pywalfox update
     pushd $HOME/projects/oreo-cursors
       make build
@@ -35,5 +34,6 @@ wal-tile() {
         ninja -C build install
     popd
     gsettings set org.gnome.desktop.interface gtk-theme CustomGTK
+    killall -SIGUSR2 waybar
     WALL=$(< "$HOME/.cache/wal/wal")
  }
