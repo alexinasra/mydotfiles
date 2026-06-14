@@ -3,21 +3,21 @@
 @define-color warning_color #FAAD14;
 @define-color success_color #52C41A;
 @define-color info_color #1890FF;
-@define-color theme_bg_color rgb(24, 26, 42);
-@define-color theme_fg_color #9fa2a1;
-@define-color theme_base_color rgb(31, 37, 42);
-@define-color theme_selected_bg_color #0a031e;
+@define-color theme_bg_color #462c1b;
+@define-color theme_fg_color #e5d6c7;
+@define-color theme_base_color rgb(80, 52, 32);
+@define-color theme_selected_bg_color #462c1b;
 @define-color theme_selected_fg_color #ffffff;
 * {
-  color: #9fa2a1;
-  caret-color: #DD7686;
+  color: #e5d6c7;
+  caret-color: #C9986C;
   -gtk-icon-style: symbolic;
   -gtk-icon-theme: "Adwaita";
-  outline-color: rgba(221, 118, 134, 0.35);
+  outline-color: rgba(201, 152, 108, 0.35);
   outline-style: solid;
   outline-width: 0;
   text-shadow: none;
-  -gtk-secondary-caret-color: #EED5D2;
+  -gtk-secondary-caret-color: #E1AB7C;
 }
 
 window,
@@ -25,22 +25,22 @@ dialog,
 popover,
 menu,
 .background {
-  background-color: rgb(24, 26, 42);
-  color: #9fa2a1;
+  background-color: #462c1b;
+  color: #e5d6c7;
 }
 
 popover,
 menu,
 tooltip {
-  border: 1px solid rgb(69, 80, 73);
-  border-radius: 8px;
-  background: rgb(76, 68, 63);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgb(111, 87, 68);
+  border-radius: 4px;
+  background: rgb(77, 50, 31);
+  box-shadow: 0 12px 28px rgba(70, 44, 27, 0.18);
 }
 
 tooltip {
   padding: 6px 10px;
-  background: #0a031e;
+  background: #C38B5C;
   color: #ffffff;
 }
 
@@ -49,10 +49,10 @@ titlebar,
 .titlebar {
   min-height: 46px;
   padding: 3px 10px;
-  background: linear-gradient(to bottom, #0a031e, rgb(60, 49, 70));
-  border-bottom: 1px solid rgb(136, 144, 139);
+  background: linear-gradient(to bottom, #462c1b, rgb(80, 52, 32));
+  border-bottom: 1px solid rgb(161, 140, 123);
   color: #ffffff;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 1px rgba(229, 214, 199, 0.06);
 }
 
 headerbar *,
@@ -74,8 +74,8 @@ titlebar menubutton,
 headerbar menubutton > button,
 titlebar menubutton > button,
 .titlebar menubutton > button {
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 menubar {
@@ -85,14 +85,14 @@ menubar {
 
 menubar > menuitem {
   margin: 0 2px;
-  padding: 5px 10px;
+  padding: 3px 4px;
   border-radius: 8px;
 }
 
 menubar > menuitem:hover,
 menu menuitem:hover {
-  background: rgba(221, 118, 134, 0.14);
-  color: #9fa2a1;
+  background: rgba(201, 152, 108, 0.14);
+  color: #e5d6c7;
 }
 
 menu {
@@ -118,8 +118,87 @@ menu menuitem:focus {
 }
 
 menu menuitem:hover {
-  background: rgba(221, 118, 134, 0.14);
-  border-color: #DD7686;
+  background: rgba(201, 152, 108, 0.14);
+  border-color: #C9986C;
+}
+
+entry,
+spinbutton,
+combobox,
+treeview.view {
+  min-height: 28px;
+  padding: 6px 10px;
+  border: 1px solid rgb(111, 87, 68);
+  border-radius: 8px;
+  background: rgb(80, 52, 32);
+  color: #e5d6c7;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+entry:focus,
+spinbutton:focus,
+combobox:focus {
+  border-color: #C9986C;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), 0 0 0 2px rgba(201, 152, 108, 0.24);
+}
+
+selection,
+*:selected {
+  background-color: #462c1b;
+  color: #ffffff;
+}
+
+trough {
+  border-radius: 999px;
+  background: rgb(111, 87, 68);
+}
+
+progress,
+highlight {
+  border-radius: 999px;
+  background: #C38B5C;
+}
+
+notebook > header tab {
+  padding: 8px 12px;
+  border-bottom: 2px solid transparent;
+  color: rgb(169, 149, 134);
+}
+
+notebook > header tab:checked {
+  border-color: #C38B5C;
+  color: #e5d6c7;
+}
+
+toolbar,
+sidebar,
+stacksidebar {
+  background: rgb(78, 51, 31);
+  border-color: rgb(111, 87, 68);
+}
+
+menubar {
+  background: rgb(78, 51, 31);
+  border-color: rgb(111, 87, 68);
+}
+
+row,
+treeview.view {
+  min-height: 32px;
+  padding: 3px 6px;
+  border-radius: 8px;
+}
+
+row:hover,
+treeview.view:hover,
+modelbutton:hover {
+  background: rgba(201, 152, 108, 0.12);
+}
+
+row:selected,
+treeview.view:selected {
+  background: #462c1b;
+  color: #ffffff;
 }
 
 button,
@@ -127,12 +206,12 @@ button.flat,
 modelbutton {
   min-height: 28px;
   min-width: 32px;
-  padding: 6px 12px;
-  border: 1px solid rgb(69, 80, 73);
+  padding: 3px 6px;
+  border: 1px solid rgb(111, 87, 68);
   border-radius: 8px;
-  background: rgb(76, 68, 63);
-  color: #9fa2a1;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
+  background: rgb(77, 50, 31);
+  color: #e5d6c7;
+  box-shadow: inset 0 1px rgba(229, 214, 199, 0.06);
   transition: background 120ms ease-out, border-color 120ms ease-out, box-shadow 120ms ease-out;
 }
 
@@ -162,27 +241,27 @@ modelbutton {
 
 button:hover,
 modelbutton:hover {
-  border-color: rgb(136, 144, 139);
-  background: rgb(99, 85, 80);
+  border-color: rgb(161, 140, 123);
+  background: rgb(77, 50, 31);
 }
 
 button:active,
 button:checked {
-  border-color: #DD7686;
-  background: rgb(115, 103, 98);
+  border-color: #C9986C;
+  background: rgb(76, 49, 30);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.18);
 }
 
 button.suggested-action,
 button.default {
-  border-color: #0a031e;
-  background: #0a031e;
+  border-color: #C38B5C;
+  background: #C38B5C;
   color: #ffffff;
 }
 
 button.suggested-action:hover,
 button.default:hover {
-  background: rgb(40, 27, 49);
+  background: rgb(198, 144, 98);
 }
 
 button.destructive-action {
@@ -194,91 +273,66 @@ button.destructive-action {
 button:disabled,
 entry:disabled,
 combobox:disabled {
-  color: rgb(85, 87, 96);
-  background: rgb(33, 40, 45);
-}
-
-entry,
-spinbutton,
-combobox,
-treeview.view {
-  min-height: 28px;
-  padding: 6px 10px;
-  border: 1px solid rgb(69, 80, 73);
-  border-radius: 8px;
-  background: rgb(31, 37, 42);
-  color: #9fa2a1;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12);
-}
-
-entry:focus,
-spinbutton:focus,
-combobox:focus {
-  border-color: #DD7686;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), 0 0 0 2px rgba(221, 118, 134, 0.24);
-}
-
-selection,
-*:selected {
-  background-color: #0a031e;
-  color: #ffffff;
-}
-
-check,
-radio {
-  min-width: 16px;
-  min-height: 16px;
-  border: 1px solid rgb(69, 80, 73);
-  background: rgb(31, 37, 42);
-}
-
-check {
-  border-radius: 4px;
-}
-
-radio {
-  border-radius: 999px;
-}
-
-check:checked,
-radio:checked {
-  background: #0a031e;
-  border-color: #0a031e;
-  color: #ffffff;
+  color: rgb(142, 121, 104);
+  background: rgb(74, 47, 29);
 }
 
 switch {
   min-width: 48px;
   min-height: 28px;
   border-radius: 999px;
-  background: rgb(69, 80, 73);
+  background: rgb(111, 87, 68);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 switch:checked {
-  background: #0a031e;
+  background: #C38B5C;
 }
 
-trough {
-  border-radius: 999px;
-  background: rgb(69, 80, 73);
+/* switch slider {} */
+check {
+  min-width: 16px;
+  min-height: 16px;
+  border: 1px solid rgb(111, 87, 68);
+  background: rgb(80, 52, 32);
 }
 
-progress,
-highlight {
+check {
+  border-radius: 4px;
+}
+
+check:checked {
+  background: #C38B5C;
+  border-color: #C38B5C;
+  color: #ffffff;
+}
+
+radio {
+  min-width: 16px;
+  min-height: 16px;
+  border: 1px solid rgb(111, 87, 68);
+  background: rgb(80, 52, 32);
+}
+
+radio {
   border-radius: 999px;
-  background: #0a031e;
+}
+
+radio:checked {
+  background: #C38B5C;
+  border-color: #C38B5C;
+  color: #ffffff;
 }
 
 scrollbar slider {
   min-width: 8px;
   min-height: 8px;
   border-radius: 999px;
-  background: rgba(159, 162, 161, 0.42);
+  background: rgba(229, 214, 199, 0.42);
 }
 
 scrollbar slider:hover {
-  background: #DD7686;
+  background: #C9986C;
 }
 
 /* Ensure the buttons have visible dimensions and remove default extra padding */
@@ -314,46 +368,4 @@ scrollbar.horizontal button.up {
 
 scrollbar.horizontal button.down {
   -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
-}
-
-notebook > header tab {
-  padding: 8px 12px;
-  border-bottom: 2px solid transparent;
-  color: rgb(108, 110, 116);
-}
-
-notebook > header tab:checked {
-  border-color: #0a031e;
-  color: #9fa2a1;
-}
-
-toolbar,
-sidebar,
-stacksidebar {
-  background: rgb(44, 57, 48);
-  border-color: rgb(69, 80, 73);
-}
-
-menubar {
-  background: rgb(44, 57, 48);
-  border-color: rgb(69, 80, 73);
-}
-
-row,
-treeview.view {
-  min-height: 32px;
-  padding: 3px 6px;
-  border-radius: 8px;
-}
-
-row:hover,
-treeview.view:hover,
-modelbutton:hover {
-  background: rgba(221, 118, 134, 0.12);
-}
-
-row:selected,
-treeview.view:selected {
-  background: #0a031e;
-  color: #ffffff;
 }
