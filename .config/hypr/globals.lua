@@ -1,6 +1,6 @@
 require("colors")
 -- Cursor settings
-CURSOR_THEME  = "oreo-custom-cursors"
+CURSOR_THEME  = "oreo_custom_cursors"
 CURSOR_SIZE   = "24"
 
 
