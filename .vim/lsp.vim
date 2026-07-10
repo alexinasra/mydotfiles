@@ -60,6 +60,12 @@ let lspServers = [
     \   filetype: ['css'],
     \   path: 'css-languageserver',
     \   args: ['--stdio'],
+    \ },
+    \ #{
+    \   name: 'mesonlsp',
+    \   filetype: ['meson'],
+    \   path: 'mesonlsp',
+    \   args: ['--lsp'],
     \ }
 \ ]
 
@@ -84,3 +90,6 @@ autocmd User LspSetup call LspOptionsSet(#{
     \   diagSignInfoText: '»',
     \   diagSignHintText: '⚑',
     \ })
+
+" meson autoformat
+autocmd BufWritePre *.build,*.options LspFormat

@@ -20,6 +20,8 @@ call s:ensure('junegunn/fzf.vim')
 call s:ensure('itchyny/lightline.vim')
 call s:ensure('yegappan/lsp')
 call s:ensure('rhysd/vim-clang-format')
+call s:ensure('prabirshrestha/async.vim')
+call s:ensure('prabirshrestha/vim-lsp')
 
 
 " --- Fix Netrw Update Bugs ---
